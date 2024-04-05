@@ -7,6 +7,7 @@ import StarlocoverImg from "../../public/assets/projects/Starlocover.png";
 import chattykenportfileImg from "../../public/assets/projects/chattykenportfile.png";
 import AmistadcityImg from "../../public/assets/projects/Amistadcity.png";
 import nikemockupImg from "../../public/assets/projects/nikemockup.png";
+import tlogogogoImg from "../../public/assets/projects/tlogogogo.jpg";
 
 
 
@@ -54,6 +55,13 @@ function ProjectsContainer(): JSX.Element {
         projectUrl="/Starloworld"
         tech="NodeJS, Tailwind, PHP, Javascript"
         title="Starlo Music & Video Streaming"
+      />
+
+<ProjectItem
+        backgroundImg={tlogogogoImg}
+        projectUrl="/Tasar"
+        tech="NodeJS, Tailwind, PHP, Javascript"
+        title="3D Ecomm Platform"
       />
       
       <ProjectItem
