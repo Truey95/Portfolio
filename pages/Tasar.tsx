@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import tlogogogoImg from "../public/assets/projects/tlogogogo.png";
+import tlogogogoImg from "../public/assets/projects/tlogogogo.jpg";
 
 import BackButton from "../components/BackButton";
 
