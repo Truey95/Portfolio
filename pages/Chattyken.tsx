@@ -53,7 +53,7 @@ export default function Dictionary(): JSX.Element {
           fill
           src={chattykenportfileImg}
         />
-        <ProjectHeroText h2="Chatty Ken" h3="Tailwind, PHP ,Javascript, Stripe, Typescript" />
+        <ProjectHeroText h2="CHATTY KEN" h3="Tailwind, PHP ,Javascript, Stripe, Typescript" />
       </div>
 
       <div className="max-w-7xl mx-auto p-2 grid md:grid-cols-5 gap-8 py-8">
