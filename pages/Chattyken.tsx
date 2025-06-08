@@ -36,7 +36,7 @@ function DictionaryTextBody(): JSX.Element {
         <span></span>
       </p>
 
-      <ProjectButtonDemo url="https://chattyken.com" />
+      <ProjectButtonDemo url="https://mypetcora.com" />
     </div>
   );
 }
