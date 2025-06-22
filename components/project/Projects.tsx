@@ -1,12 +1,11 @@
 import ProjectItem from "./ProjectItem";
 
-import holsolwellcoverImg from "../../public/assets/projects/holsolwellcover.png";
-import uvmgallerycoverImg from "../../public/assets/projects/uvmgallerycover.png";
-import passhubcoverImg from "../../public/assets/projects/passhubcover.png";
-import StarlocoverImg from "../../public/assets/projects/Starlocover.png";
-import chattykenportfileImg from "../../public/assets/projects/chattykenportfile.png";
-import AmistadcityImg from "../../public/assets/projects/Amistadcity.png";
-import nikemockupImg from "../../public/assets/projects/nikemockup.png";
+
+import nhpsImg from "../../public/assets/projects/nhps.png";
+import aivrarImg from "../../public/assets/projects/aivrar.png";
+import petcoraImg from "../../public/assets/projects/petcora.png";
+import swdnnImg from "../../public/assets/projects/swdnn.png";
+
 
 
 
@@ -15,53 +14,34 @@ function ProjectsContainer(): JSX.Element {
   return (
     <div className="grid md:grid-cols-3 gap-8">
       <ProjectItem
-        backgroundImg={passhubcoverImg}
-        projectUrl="/passhub"
+        backgroundImg={aivrarImg}
+        projectUrl="/aivrar"
         tech="React, Typescript, PHP"
-        title="PassHub"
+        title="Aivrar"
       />
 
       <ProjectItem
-        backgroundImg={holsolwellcoverImg}
-        projectUrl="/holsolwell"
-        tech="Ecwid, Wordpress, Divi, Hyper 3D"
-        title="Hol Soul Wellness"
-      />
-
-<ProjectItem
-        backgroundImg={nikemockupImg}
-        projectUrl="/Nikejordan"
-        tech="Wordpress, Divi, Hyper3D"
-        title="Nike Jordan Mock Up"
-      />
-
-      <ProjectItem
-        backgroundImg={uvmgallerycoverImg}
-        projectUrl="/Upscalevisionmedia"
+        backgroundImg={nhpsImg}
+        projectUrl="/nhps"
         tech="Divi Builder, Wordpress, Cpanel, Ecwid"
-        title="Upscale Vision Media"
+        title="New Haven Phlebotomy School"
       />
 
       <ProjectItem
-        backgroundImg={AmistadcityImg}
-        projectUrl="/Amistadcity"
+        backgroundImg={swdnnImg}
+        projectUrl="/swdnn"
         tech="Wordpress, Divi, Elementor, Revslider, Cpanel"
-        title="Amistad City Festival"
+        title="She Wit Da Nupes Now"
       />
 
       <ProjectItem
-        backgroundImg={StarlocoverImg}
+        backgroundImg={petcoraImg}
         projectUrl="/Starloworld"
         tech="NodeJS, Tailwind, PHP, Javascript"
-        title="Starlo Music & Video Streaming"
+        title="Pet Cora"
       />
       
-      <ProjectItem
-        backgroundImg={chattykenportfileImg}
-        projectUrl="Chattyken"
-        tech="OpenAI, Typescript, Javascript, PHP"
-        title="Chatty Ken AI"
-      />
+
 
     </div>
   );
