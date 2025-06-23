@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import holsolwellcoverImg from "../public/assets/projects/holsolwellcover.png";
+import aivrartImg from "../public/assets/projects/aivrart.png";
 
 import BackButton from "../components/BackButton";
 
@@ -53,7 +53,7 @@ export default function Dictionary(): JSX.Element {
           alt="/"
           className="absolute z-10 object-cover"
           fill
-          src={holsolwellcoverImg}
+          src={aivrartImg}
         />
         <ProjectHeroText h2="Hol Sol Wellness" h3="Wordpress, Divi, Hyper 3D, Ecwid" />
       </div>
