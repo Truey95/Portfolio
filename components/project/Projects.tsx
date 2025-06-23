@@ -13,7 +13,7 @@ function ProjectsContainer(): JSX.Element {
     <div className="grid md:grid-cols-3 gap-8">
       <ProjectItem
         backgroundImg={aivrartechImg}
-        projectUrl="/aivrar"
+        projectUrl="/aivrart"
         tech="React, Typescript, PHP"
         title="Aivrar"
       />
@@ -34,7 +34,7 @@ function ProjectsContainer(): JSX.Element {
 
       <ProjectItem
         backgroundImg={petcoraImg}
-        projectUrl="/Starloworld"
+        projectUrl="/petcora"
         tech="NodeJS, Tailwind, PHP, Javascript"
         title="Pet Cora"
       />
