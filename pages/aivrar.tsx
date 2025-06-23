@@ -23,10 +23,7 @@ function MovieDatabaseTextBody(): JSX.Element {
     <div className="col-span-4">
       <ProjectTextHeading />
       <p>
-        In managing my Passhub application via cPanel, I meticulously configure the database
-        secure file permissions, automate maintenance with cron jobs, bolster security with SSL
-        React waand .htaccess configurations, and enhance functionality with EasyApache extensions,
-        robust and secure user experience.{" "}
+        Ai powered mobile and web application for educational and social purposes.{" "}
         <Link
           href=""
           target="_blank"
@@ -62,7 +59,7 @@ export default function MovieDatabase(): JSX.Element {
           alt="/"
           className="absolute z-10 object-cover"
           fill
-          src={passhubcoverImg}
+          src={aivrarImg}
         />
         <ProjectHeroText h2="AIVRAR TECH" h3="Javascript, Wordpress, PHP, Typescript" />
       </div>
