@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import passhubcoverImg from '../../public/assets/projects/passhubcover.png';
+import aivrartImg from '../public/assets/projects/aivrart.png';
 
 import BackButton from "../components/BackButton";
 import ProjectButtonCode from "../components/project/ProjectButtonCode";
@@ -59,7 +59,7 @@ export default function MovieDatabase(): JSX.Element {
           alt="/"
           className="absolute z-10 object-cover"
           fill
-          src={passhubcoverImg}
+          src={aivrartImg}
         />
         <ProjectHeroText h2="AIVRAR TECH" h3="Javascript, Wordpress, PHP, Typescript" />
       </div>
