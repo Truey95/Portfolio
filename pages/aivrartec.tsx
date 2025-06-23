@@ -22,7 +22,7 @@ function DictionaryTextBody(): JSX.Element {
     <div className="col-span-4">
       <ProjectTextHeading />
       <p>
-      As the sole architect behind Hol Sol Wellness,
+      As the sole architect behind Hol Sol Wellness
        a health-focused e-commerce website, I meticulously crafted a 
        seamless online experience using WordPress and the Divi Builder, 
        integrated immersive 3D visualizations with Hyper3D, and implemented a 
