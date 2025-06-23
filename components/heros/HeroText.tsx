@@ -4,7 +4,7 @@ export default function HeroText(): JSX.Element {
     <>
       <div>
         <p className="uppercase text-lg tracking-widest text-gray-600">
-          Let&apos;s build web applications!
+          Let&apos;s build mobile & web applications!
         </p>
       </div>
 
