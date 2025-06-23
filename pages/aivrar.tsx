@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import StarlocoverImg from "../public/assets/projects/Starlocover.png";
+import aivrarImg from "../../public/assets/projects/aivrar.png";
 
 import BackButton from "../components/BackButton";
-
+import ProjectButtonCode from "../components/project/ProjectButtonCode";
 import ProjectButtonDemo from "../components/project/ProjectButtonDemo";
 import ProjectHeroOverlay from "../components/project/ProjectHeroOverlay";
 import ProjectHeroText from "../components/project/ProjectHeroText";
@@ -12,19 +12,21 @@ import ProjectTextHeading from "../components/project/ProjectTextBody";
 import TechStack from "../components/TechStack";
 
 const techStack = [
-  "JavaScript",
-  "Tailwind",
+  "Javascript",
   "PHP",
-  "Typescript",
+  "TypeScript",
 ] as const;
 
 // body of text found in project pages
-function DictionaryTextBody(): JSX.Element {
+function MovieDatabaseTextBody(): JSX.Element {
   return (
     <div className="col-span-4">
       <ProjectTextHeading />
       <p>
-      Music streaming and video streaming website using various api.{" "}
+        In managing my Passhub application via cPanel, I meticulously configure the database
+        secure file permissions, automate maintenance with cron jobs, bolster security with SSL
+        React waand .htaccess configurations, and enhance functionality with EasyApache extensions,
+        robust and secure user experience.{" "}
         <Link
           href=""
           target="_blank"
@@ -32,16 +34,26 @@ function DictionaryTextBody(): JSX.Element {
         >
           {" "}
         </Link>
-        <span></span>
+        <span>
+          {" "}
+        </span>
+        <Link
+          href=""
+          target="_blank"
+          className="text-blue-500 cursor-pointer"
+        >
+          {" "}
+        </Link>
       </p>
 
-      <ProjectButtonDemo url="https://starloworld.com" />
+      <ProjectButtonCode url="" />
+      <ProjectButtonDemo url="https://aivrartech.com" />
     </div>
   );
 }
 
-// dictionary page
-export default function Dictionary(): JSX.Element {
+// movie database page
+export default function MovieDatabase(): JSX.Element {
   return (
     <div className="w-full">
       <div className="w-screen h-[50vh] relative">
@@ -50,13 +62,13 @@ export default function Dictionary(): JSX.Element {
           alt="/"
           className="absolute z-10 object-cover"
           fill
-          src={StarlocoverImg}
+          src={passhubcoverImg}
         />
-        <ProjectHeroText h2="Starlo World" h3="Tailwind, PHP ,Javascript, Stripe, Typescript" />
+        <ProjectHeroText h2="AIVRAR TECH" h3="Javascript, Wordpress, PHP, Typescript" />
       </div>
 
       <div className="max-w-7xl mx-auto p-2 grid md:grid-cols-5 gap-8 py-8">
-        <DictionaryTextBody />
+        <MovieDatabaseTextBody />
         <TechStack data={techStack} />
         <BackButton />
       </div>
