@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import uvmgallerycoverImg from "../public/assets/projects/uvmgallerycover.png";
+import nhpsImg from "../public/assets/projects/nhps.png";
 
 import BackButton from "../components/BackButton";
 
@@ -23,12 +23,7 @@ function WeatherTextBody(): JSX.Element {
     <div className="col-span-4">
       <ProjectTextHeading />
       <p>
-      Upscale Vision Media, a sophisticated media marketing portal, 
-      utilizing the intuitive WordPress ecosystem, and infused it with the 
-      elegance of the Divi theme. To streamline e-commerce functionality, 
-      I adeptly linked Ecwid for product management and integrated Stripe for 
-      secure payment processing, creating a harmonious 
-      online shopping environment. {" "}
+      Ai powered phlebotomy school, each user account has ai agents catered towards their learning style . {" "}
         <Link
           href=""
           target="_blank"
@@ -51,7 +46,7 @@ function WeatherTextBody(): JSX.Element {
         </span>
       </p>
       
-      <ProjectButtonDemo url="https://upscalevisionmedia.org" />
+      <ProjectButtonDemo url="https://newhavenphlebotomy.com" />
     </div>
   );
 }
@@ -66,7 +61,7 @@ export default function Weather(): JSX.Element {
           alt="/"
           className="absolute z-10 object-cover"
           fill
-          src={uvmgallerycoverImg}
+          src={nhpsImg}
         />
         <ProjectHeroText
           h2="Upscale Vision Media"
