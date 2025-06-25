@@ -1,7 +1,7 @@
 import ProjectItem from "./ProjectItem";
 
 import nhpsImg from "../../public/assets/projects/nhps.png";
-import aivrartechImg from "../../public/assets/projects/aivrartech.png";
+import aivrartImg from "../../public/assets/projects/aivrart.png";
 import petcoraImg from "../../public/assets/projects/petcora.png";
 import swdnnImg from "../../public/assets/projects/swdnn.png";
 
@@ -11,9 +11,10 @@ import swdnnImg from "../../public/assets/projects/swdnn.png";
 function ProjectsContainer(): JSX.Element {
   return (
     <div className="grid md:grid-cols-3 gap-8">
+      
       <ProjectItem
-        backgroundImg={aivrartechImg}
-        projectUrl="/aivrart"
+        backgroundImg={aivrartImg}
+        projectUrl="/aivrartech"
         tech="React, Typescript, PHP"
         title="Aivrar"
       />
