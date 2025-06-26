@@ -12,7 +12,7 @@ import ProjectTextHeading from "../components/project/ProjectTextBody";
 import TechStack from "../components/TechStack";
 
 const techStack = [
-  "",
+  "Frontend - React 18 with TypeScript - Vite for build tooling and development server - Tailwind CSS for styling with custom theme support - Radix UI components for accessible UI primitives - Wouter for client-side routing - TanStack Query for server state management - React Hook Form with Zod validation - Framer Motion for animations - Lucide React for icons ",
   "",
   
 ] as const;
@@ -64,7 +64,7 @@ export default function Weather(): JSX.Element {
           src={nhpsImg}
         />
         <ProjectHeroText
-          h2="Upscale Vision Media"
+          h2="New Haven phlebotomy School"
           h3="Wordpress, Divi"
         />
       </div>
