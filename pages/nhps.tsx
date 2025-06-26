@@ -42,7 +42,7 @@ const techStack = [
 "Deployment Tools",
 "ESBuild for production builds",
 "PostCSS with Autoprefixer",
-"Drizzle Kit for database migrations",,
+"Drizzle Kit for database migrations",
 
 "Deployment",
 "Google Cloud Engine",
