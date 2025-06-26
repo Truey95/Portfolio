@@ -13,45 +13,45 @@ import TechStack from "../components/TechStack";
 
 const techStack = [
   "Frontend"
-"React 18 with TypeScript"
-"Vite for build tooling and development server"
-"Tailwind CSS for styling with custom theme support"
-"Radix UI components for accessible UI primitives"
-"Wouter for client-side routing"
-"TanStack Query for server state management"
-"React Hook Form with Zod validation"
-"Framer Motion for animations"
+"React 18 with TypeScript",
+"Vite for build tooling and development server",
+"Tailwind CSS for styling with custom theme support",
+"Radix UI components for accessible UI primitives",
+"Wouter for client-side routing",
+"TanStack Query for server state management",
+"React Hook Form with Zod validation",
+"Framer Motion for animations",
 "Lucide React for icons",
   
 "Backend"
-"Node.js with Express.js"
-"TypeScript for type safety"
-"tsx for running TypeScript files directly"
-"Express Session with MemoryStore for session management"
+"Node.js with Express.js",
+"TypeScript for type safety",
+"tsx for running TypeScript files directly",
+"Express Session with MemoryStore for session management",
 "Passport.js with local strategy for authentication",
 
-"Database & ORM"
-"PostgreSQL as the database"
-"Drizzle ORM for database"
+"Database & ORM",
+"PostgreSQL as the database",
+"Drizzle ORM for database",
 "Neon Database serverless PostgreSQL hosting",
 
-"AI Intergration"
-"OpenAI APU for chat functionality"
+"AI Intergration",
+"OpenAI APU for chat functionality",
 "Anthropic Claude API as secondary AI provider",
 
-"Deployment Tools"
-"ESBuild for production builds"
-"PostCSS with Autoprefixer"
-"Drizzle Kit for database migrations",
+"Deployment Tools",
+"ESBuild for production builds",
+"PostCSS with Autoprefixer",
+"Drizzle Kit for database migrations",,
 
-"Deployment"
+"Deployment",
 "Google Cloud Engine",
 
 "Notable Features"
-"Real-time WebSocket connections"
-"Session-based authentication"
-"AI-powered educational chat system"
-"Responsive design with mobile support"
+"Real-time WebSocket connections",
+"Session-based authentication",
+"AI-powered educational chat system",
+"Responsive design with mobile support",
 "Comprehensive phlebotomy education platform",
 
 
