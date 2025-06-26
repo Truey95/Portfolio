@@ -12,7 +12,7 @@ import ProjectTextHeading from "../components/project/ProjectTextBody";
 import TechStack from "../components/TechStack";
 
 const techStack = [
-  "Frontend"
+  "Frontend",
 "React 18 with TypeScript",
 "Vite for build tooling and development server",
 "Tailwind CSS for styling with custom theme support",
