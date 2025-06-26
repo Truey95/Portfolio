@@ -23,7 +23,7 @@ const techStack = [
 "Framer Motion for animations",
 "Lucide React for icons",
   
-"Backend"
+"Backend",
 "Node.js with Express.js",
 "TypeScript for type safety",
 "tsx for running TypeScript files directly",
@@ -47,7 +47,7 @@ const techStack = [
 "Deployment",
 "Google Cloud Engine",
 
-"Notable Features"
+"Notable Features",
 "Real-time WebSocket connections",
 "Session-based authentication",
 "AI-powered educational chat system",
