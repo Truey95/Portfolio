@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import AmistadcityImg from "../public/assets/projects/Amistadcity.png";
+import swdnnImg from "../public/assets/projects/swdnn.png";
 
 import BackButton from "../components/BackButton";
 
@@ -12,9 +12,9 @@ import ProjectTextHeading from "../components/project/ProjectTextBody";
 import TechStack from "../components/TechStack";
 
 const techStack = [
-  "JavaScript",
-  "Rev Slider",
-  "Wordpress"
+  "",
+  "",
+  ""
 ] as const;
 
 // body of text found in project pages
@@ -24,7 +24,8 @@ function LandingPageTextBody() {
       <ProjectTextHeading />
       <p>
         I used UX/UI experience to build this festival website with various technologies and frameworks. SpaceX landing page was
-        made with{" "}
+        made with
+        Tech Stack: {" "}
         <Link
           href="https://milliorn.github.io/SpaceX-Website/"
           target="_blank"
@@ -44,7 +45,7 @@ function LandingPageTextBody() {
         </Link>
       </p>
 
-      <ProjectButtonDemo url="https://www.amistadcity.com" />
+      <ProjectButtonDemo url="https://www.shewitdanupes.com" />
     </div>
   );
 }
@@ -59,7 +60,7 @@ export default function LandingPage(): JSX.Element {
           alt="/"
           className="absolute z-10 object-cover"
           fill
-          src={AmistadcityImg}
+          src={swdnnImg}
         />
         <ProjectHeroText h2="Amistad City" h3="React, Tailwind CSS, Rev Slider, Wordpress" />
       </div>
