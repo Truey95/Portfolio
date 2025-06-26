@@ -15,28 +15,28 @@ function ProjectsContainer(): JSX.Element {
       <ProjectItem
         backgroundImg={aivrartImg}
         projectUrl="/aivrartech"
-        tech="React, Typescript, PHP"
+        tech=""
         title="Aivrar"
       />
 
       <ProjectItem
         backgroundImg={nhpsImg}
         projectUrl="/nhps"
-        tech="Divi Builder, Wordpress, Cpanel, Ecwid"
+        tech=""
         title="New Haven Phlebotomy School"
       />
 
       <ProjectItem
         backgroundImg={swdnnImg}
         projectUrl="/swdnn"
-        tech="Wordpress, Divi, Elementor, Revslider, Cpanel"
+        tech=""
         title="She Wit Da Nupes Now"
       />
 
       <ProjectItem
         backgroundImg={petcoraImg}
         projectUrl="/petcora"
-        tech="NodeJS, Tailwind, PHP, Javascript"
+        tech=""
         title="Pet Cora"
       />
       
