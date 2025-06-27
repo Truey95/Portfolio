@@ -23,7 +23,10 @@ function LandingPageTextBody() {
     <div className="col-span-4">
       <ProjectTextHeading />
       <p>
-        Clothing Ecomm website for members of Kappa Alpha Psi organization.
+        Clothing Ecomm website for members of Kappa Alpha Psi organization. 
+        
+        The app connects payment → Printify → automatic fulfillment, 
+        so customers order and Printify handles everything else automatically.
         Tech Stack: Frontend:
 
 React with TypeScript - Main website framework
