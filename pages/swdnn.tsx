@@ -23,9 +23,22 @@ function LandingPageTextBody() {
     <div className="col-span-4">
       <ProjectTextHeading />
       <p>
-        I used UX/UI experience to build this festival website with various technologies and frameworks. SpaceX landing page was
-        made with
-        Tech Stack: {" "}
+        Clothing Ecomm website for members of Kappa Alpha Psi organization.
+        Tech Stack: Frontend:
+
+React with TypeScript - Main website framework
+Tailwind CSS - Styling and design
+Vite - Fast development tool
+Backend:
+
+Node.js with Express - Server handling requests
+PostgreSQL - Database for storing data
+Drizzle - Database management
+Key Integrations:
+
+Printify API - Handles printing and shipping orders
+OpenAI API - Powers the virtual try-on feature
+Shopify API - Additional e-commerce features {" "}
         <Link
           href="https://milliorn.github.io/SpaceX-Website/"
           target="_blank"
@@ -37,7 +50,7 @@ function LandingPageTextBody() {
           s{" "}
         </span>
         <Link
-          href="https://github.com/Truey95"
+          href=""
           target="_blank"
           className="text-blue-500 cursor-pointer"
         >
