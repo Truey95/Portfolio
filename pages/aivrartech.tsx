@@ -105,7 +105,7 @@ function MovieDatabaseTextBody(): JSX.Element {
     <div className="col-span-4">
       <ProjectTextHeading />
       <p>
-        Ai powered mobile and web application for educational and social purposes.{" "}
+        AI powered mobile and web application for educational and social purpose.{" "}
         <Link
           href=""
           target="_blank"
