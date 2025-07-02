@@ -12,7 +12,21 @@ import ProjectTextHeading from "../components/project/ProjectTextBody";
 import TechStack from "../components/TechStack";
 
 const techStack = [
-  "",
+  "Tech Stack: Frontend:",
+
+"React with TypeScript - Main website framework",
+"Tailwind CSS - Styling and design",
+"Vite - Fast development tool",
+"Backend:",
+
+"Nodejs with Express - Server handling requests",
+"PostgreSQL - Database for storing data",
+"Drizzle - Database management",
+"Key Integrations:",
+
+"Printify API - Handles printing and shipping orders",
+"OpenAI API - Powers the virtual try-on feature",
+"Shopify API - Additional e-commerce feature",
   "",
   ""
 ] as const;
@@ -25,23 +39,9 @@ function LandingPageTextBody() {
       <p>
         Clothing Ecomm website for members of Kappa Alpha Psi organization. 
         
-        The app connects payment → Printify → automatic fulfillment, 
+        The Web app connects payment → Printify → automatic fulfillment, 
         so customers order and Printify handles everything else automatically.
-        Tech Stack: Frontend:
-
-React with TypeScript - Main website framework
-Tailwind CSS - Styling and design
-Vite - Fast development tool
-Backend:
-
-Node.js with Express - Server handling requests
-PostgreSQL - Database for storing data
-Drizzle - Database management
-Key Integrations:
-
-Printify API - Handles printing and shipping orders
-OpenAI API - Powers the virtual try-on feature
-Shopify API - Additional e-commerce features {" "}
+         {" "}
         <Link
           href="https://milliorn.github.io/SpaceX-Website/"
           target="_blank"
@@ -78,7 +78,7 @@ export default function LandingPage(): JSX.Element {
           fill
           src={swdnnImg}
         />
-        <ProjectHeroText h2="Amistad City" h3="React, Tailwind CSS, Rev Slider, Wordpress" />
+        <ProjectHeroText h2="She Wit Da Nupes" h3="" />
       </div>
 
       <div className="max-w-7xl mx-auto p-2 grid md:grid-cols-5 gap-8 py-8">
