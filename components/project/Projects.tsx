@@ -35,7 +35,7 @@ function ProjectsContainer(): JSX.Element {
 
       <ProjectItem
         backgroundImg={petcoraImg}
-        projectUrl="/petcora"
+        projectUrl="/petcoraa"
         tech=""
         title="Pet Cora"
       />
