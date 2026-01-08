@@ -6,6 +6,7 @@ import Contact from "../components/contacts/Contact";
 import Hero from "../components/heros/Hero";
 import Projects from "../components/project/Projects";
 import Skills from "../components/skill/Skills";
+import HandScroll from "../components/HandScroll";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,6 +29,7 @@ export default function Home() {
       <Skills />
       <Projects />
       <Contact />
+      <HandScroll />
     </>
   );
 }

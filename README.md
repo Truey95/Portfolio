@@ -13,6 +13,7 @@ Portfolio is a personal website built with Next.js, React, and TypeScript to sho
 - Customizable layout and content
 - Integration of React Icons for stylish icons
 - Seamless deployment with Vercel
+- **Hand Tracking Scrolling**: Scroll through the portfolio using hand gestures (Webcam required).
 
 ## Technologies Used
 

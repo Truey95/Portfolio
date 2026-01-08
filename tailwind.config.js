@@ -17,6 +17,8 @@ module.exports = {
         'embossed-sm': '3px 3px 6px #050505, -3px -3px 6px #0f0f0f',
         'debossed-sm': 'inset 3px 3px 6px #050505, inset -3px -3px 6px #0f0f0f',
         'embossed-hover': '8px 8px 16px #050505, -8px -8px 16px #121212',
+        'hand-glow': '0 0 15px rgba(255, 255, 255, 0.3)',
+        'hand-glow-active': '0 0 20px rgba(255, 255, 255, 0.5)',
       },
       fontFamily: {
         'luxury': ['Cinzel', 'serif'],
