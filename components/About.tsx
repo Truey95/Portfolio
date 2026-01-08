@@ -5,25 +5,24 @@ import Link from "next/link";
 function AboutText(): JSX.Element {
   return (
     <div className="col-span-2 mx-4">
-      <p className="uppercase text-xl tracking-widest text-indigo-600 text-center xl:text-start">
+      <p className="uppercase text-sm tracking-[0.3em] text-gray-500 text-center xl:text-start font-luxury">
         About Me
       </p>
-      <h2 className="py-4 text-center xl:text-start">Intellectual Developer</h2>
-      <p className="py-2 text-gray-600">
-        Hello! I am a passionate Software Developer with over 1 year in the industry. 
-        I specialize in crafting efficient, user-friendly websites and web applications 
-        using modern technologies like HTML5, CSS3, JavaScript, and frameworks such as React 
-        and Angular. 
-       
+      <h2 className="py-4 text-center xl:text-start uppercase tracking-wider">Intellectual Developer</h2>
+      <p className="py-2 text-gray-300 font-premium leading-relaxed">
+        Hello! I am a passionate Software Developer with over 1 year in the industry.
+        I specialize in crafting efficient, user-friendly websites and web applications
+        using modern technologies like HTML5, CSS3, JavaScript, and frameworks such as React
+        and Angular.
       </p>
-      <p className="py-2 text-gray-600">
-        My background in both front-end and back-end development, 
-        combined with my keen eye for design and user experience, allows me to create comprehensive, 
-        engaging digital solutions. 
+      <p className="py-2 text-gray-400 font-premium leading-relaxed">
+        My background in both front-end and back-end development,
+        combined with my keen eye for design and user experience, allows me to create comprehensive,
+        engaging digital solutions.
       </p>
       <Link href="/#projects" scroll={false}>
-        <p className="py-2 text-gray-600 underline cursor-pointer">
-          Click to see my favorite projects.
+        <p className="py-4 text-gray-400 underline cursor-pointer hover:text-white transition-colors font-luxury tracking-widest text-xs uppercase">
+          Explore My Portfolio
         </p>
       </Link>
     </div>
@@ -33,7 +32,7 @@ function AboutText(): JSX.Element {
 // about image container
 function AboutImage(): JSX.Element {
   return (
-    <div className="w-full h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-300">
+    <div className="w-full h-auto m-auto embossed-card flex items-center justify-center p-4 hover:scale-105 ease-in duration-300">
       <Image
         alt="/"
         blurDataURL="../public/assets/navbarLogo.png"

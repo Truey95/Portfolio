@@ -22,15 +22,17 @@ export default function NavbarBottomSideMenu(): JSX.Element {
   ] as const;
 
   return (
-    <div className="pt-40">
-      <p className="uppercase tracking-widest text-indigo-600">
-        Let&#39;s Connect
+    <div className="pt-20">
+      <p className="uppercase tracking-[0.3em] text-gray-500 font-luxury text-sm">
+        Connect
       </p>
 
-      <div className="flex items-center justify-evenly my-4 w-full sm:w-4/5">
+      <div className="flex items-center justify-between my-8 w-full">
         {sideMenuNavbarData.map((e) => (
           <Link href={e.href} target="_blank" key={e.href}>
-            <div className={e.className}>{e.icon}</div>
+            <div className="rounded-full shadow-embossed p-4 cursor-pointer hover:shadow-debossed transition-all duration-300 bg-sand-gray text-white">
+              {e.icon}
+            </div>
           </Link>
         ))}
       </div>

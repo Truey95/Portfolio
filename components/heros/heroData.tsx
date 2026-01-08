@@ -6,15 +6,15 @@ export const heroData = [
     label: "github",
     href: "https://github.com/Truey95",
     style:
-      "rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300",
+      "rounded-full shadow-embossed p-6 cursor-pointer hover:shadow-embossed-sm hover:scale-105 transition-all duration-300 bg-sand-gray text-white",
     icon: <FaGithub />,
   },
   {
     label: "linkedin",
     href: "https://www.linkedin.com/in/trevor-smith-b827a0192/",
     style:
-      "rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300 text-sky-600",
+      "rounded-full shadow-embossed p-6 cursor-pointer hover:shadow-embossed-sm hover:scale-105 transition-all duration-300 bg-sand-gray text-gray-400 hover:text-white",
     icon: <FaLinkedinIn />,
   },
-  
+
 ] as const;

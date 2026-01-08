@@ -43,11 +43,11 @@ export default function Navbar(): JSX.Element {
     : "invisible";
 
   const showHideSideMenu: string = nav
-    ? "fixed left-0 top-0 w-9/12 h-screen bg-[#F3F4F6] p-8 ease-in duration-500"
+    ? "fixed left-0 top-0 w-9/12 h-screen bg-sand-black p-8 ease-in duration-500 border-r border-gray-900"
     : "fixed left-[-100%] top-0 p-10 ease-in duration-500";
 
   const showHideShadow: string = shadow
-    ? "fixed w-full h-20 shadow-xl z-50 ease-in-out duration-300"
+    ? "fixed w-full h-20 shadow-embossed z-50 ease-in-out duration-300"
     : "fixed w-full h-20 z-50";
 
   // links found in the navbar component
@@ -58,7 +58,7 @@ export default function Navbar(): JSX.Element {
           <li
             key={link.text}
             onClick={() => setNav(false)}
-            className="py-2 text-sm"
+            className="py-4 text-sm tracking-widest text-gray-400 hover:text-white transition-colors"
           >
             <Link scroll={false} href={link.href}>
               {link.text}
@@ -77,7 +77,7 @@ export default function Navbar(): JSX.Element {
           {navbarLinksData.map((link) => (
             <li
               key={link.text}
-              className="ml-10 text-sm hover:border-b border-indigo-600/100"
+              className="ml-10 text-xs font-luxury tracking-[0.2em] hover:text-white transition-colors border-b border-transparent hover:border-white/50 py-1"
             >
               <Link scroll={false} href={link.href}>
                 {link.text}
@@ -86,8 +86,7 @@ export default function Navbar(): JSX.Element {
           ))}
         </ul>
 
-        {/* Hamburger Icon */}
-        <div onClick={handleNav} className="md:hidden">
+        <div onClick={handleNav} className="md:hidden cursor-pointer text-white">
           <AiOutlineMenu size={25} />
         </div>
       </>
@@ -99,9 +98,9 @@ export default function Navbar(): JSX.Element {
     return (
       <>
         <div className="relative">{<SideMenuTopCloseButton />}</div>
-        <div className="border-b border-gray-300">
-          <p className="w-10/12 sm:w-11/12 py-4">
-            Let&apos;s build web applications!
+        <div className="border-b border-gray-900">
+          <p className="w-10/12 sm:w-11/12 py-4 font-luxury tracking-widest text-xs text-gray-400">
+            CRAFTING DIGITAL ELEGANCE
           </p>
         </div>
       </>
@@ -112,7 +111,7 @@ export default function Navbar(): JSX.Element {
       return (
         <div
           onClick={handleNav}
-          className="rounded-full shadow-lg shadow-gray-400 p-1 cursor-pointer absolute top-0 right-0"
+          className="rounded-full shadow-embossed p-2 cursor-pointer absolute top-0 right-0 bg-sand-gray text-white"
         >
           <AiOutlineClose />
         </div>
@@ -121,8 +120,8 @@ export default function Navbar(): JSX.Element {
   }
 
   return (
-    <div style={{ backgroundColor: `#F3F4F6` }} className={showHideShadow}>
-      <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16 bg-white">
+    <div className={showHideShadow}>
+      <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16 bg-sand-black/90 backdrop-blur-md border-b border-gray-900">
         <NavbarLogoGlobal />
         <NavbarLinks />
       </div>

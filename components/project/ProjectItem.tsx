@@ -9,7 +9,7 @@ function ProjectItemButton({
 }): JSX.Element {
   return (
     <Link href={projectUrl}>
-      <p className="text-center py-3 rounded-lg bg-white text-gray-700 font-bold cursor-pointer">
+      <p className="text-center py-3 rounded-lg bg-sand-gray text-white font-bold cursor-pointer shadow-embossed-sm hover:shadow-debossed transition-all">
         View
       </p>
     </Link>
@@ -25,7 +25,7 @@ export default function ProjectItem(props: {
 }) {
   const { title, backgroundImg, projectUrl, tech } = props;
   return (
-    <div className="relative flex items-center justify-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl group hover:bg-gradient-to-r from-indigo-600 to-blue-400">
+    <div className="relative flex items-center justify-center h-auto w-full shadow-embossed rounded-xl group hover:bg-sand-black/80 transition-all duration-300">
       <Image
         alt="/"
         className="rounded-xl group-hover:opacity-10"

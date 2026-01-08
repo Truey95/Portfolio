@@ -8,7 +8,7 @@ export default function SkillsContainer(): JSX.Element {
       {skillsData.map((skillData) => (
         <div
           key={skillData.h3}
-          className="p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300"
+          className="p-6 shadow-embossed rounded-xl hover:shadow-embossed-sm hover:scale-[1.02] transition-all duration-300 bg-sand-gray border border-gray-900/30"
         >
           <Link
             href={skillData.href}
@@ -16,8 +16,8 @@ export default function SkillsContainer(): JSX.Element {
             className="grid grid-cols-2 gap-4 justify-center items-center"
           >
             <div className={skillData.style}>{skillData.icon}</div>
-            <div className="flex flex-col items-center justify-center text-sm lg:text-lg">
-              <h3>{skillData.h3}</h3>
+            <div className="flex flex-col items-start justify-center text-xs lg:text-sm">
+              <h3 className="uppercase tracking-widest font-luxury text-gray-200">{skillData.h3}</h3>
             </div>
           </Link>
         </div>
