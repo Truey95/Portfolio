@@ -1,15 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // https://nextjs.org/docs/api-reference/next/image#remote-patterns
+  // Remote patterns for images if needed in the future
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "source.unsplash.com",
-        port: "",
-        pathname: "/random/**",
-      },
-    ],
+    remotePatterns: [],
   },
 };
 

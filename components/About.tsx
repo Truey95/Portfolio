@@ -34,12 +34,12 @@ function AboutImage(): JSX.Element {
   return (
     <div className="w-full h-auto m-auto embossed-card flex items-center justify-center p-4 hover:scale-105 ease-in duration-300">
       <Image
-        alt="/"
-        blurDataURL="../public/assets/navbarLogo.png"
+        alt="Developer Workspace"
+        blurDataURL="/assets/navbarLogo.png"
         className="rounded-xl"
         height={1080}
         placeholder="blur"
-        src="https://source.unsplash.com/random/?web+developer"
+        src="/assets/about_developer.png"
         width={1920}
       />
     </div>
