@@ -10,6 +10,9 @@ module.exports = {
         'sand-black': '#0a0a0a',
         'sand-gray': '#1a1a1a',
         'sand-light': '#2a2a2a',
+        'david-beige': '#ECE9E1',
+        'david-orange': '#F08A24',
+        'david-blue': '#0A192F',
       },
       boxShadow: {
         'embossed': '6px 6px 12px #050505, -6px -6px 12px #0f0f0f',

@@ -7,29 +7,35 @@ import Hero from "../components/heros/Hero";
 import Projects from "../components/project/Projects";
 import Skills from "../components/skill/Skills";
 import HandScroll from "../components/HandScroll";
+import { MainExperience } from "../components/scene/MainExperience";
 
 const inter = Inter({ subsets: ["latin"] });
 
 // home page
 export default function Home() {
   return (
-    <>
+    <div className="relative bg-david-beige">
       <Head>
         <link rel="icon" href="/redcitylogo.png" />
         <meta
           name="description"
-          content="My Developer Portfolio site, Trevor Smith
-          "
+          content="My Developer Portfolio site, Trevor Smith"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title> Trevor Smith Portfolio</title>
+        <title>Trevor Smith | Portfolio</title>
       </Head>
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
-      <HandScroll />
-    </>
+
+      <MainExperience />
+
+      <main className="relative z-10 pointer-events-none">
+        <div className="pointer-events-auto">
+          <Hero />
+          <About />
+          <Skills />
+          <Projects />
+          <Contact />
+        </div>
+      </main>
+    </div>
   );
 }

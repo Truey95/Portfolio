@@ -12,14 +12,11 @@ html {
 /* global styles for tailwind */
 @layer base {
   body {
-    @apply bg-sand-black text-gray-300 tracking-wider font-premium;
-    background-image: url('/assets/black_sand.png');
-    background-repeat: repeat;
-    background-size: 400px;
-    background-attachment: fixed;
+    @apply bg-david-beige text-gray-800 tracking-wider font-premium;
     position: relative;
     width: 100%;
     min-height: 100vh;
+    overflow-x: hidden;
   }
 
   body::after {
@@ -34,35 +31,33 @@ html {
   h4,
   h5,
   h6 {
-    @apply font-luxury text-white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    @apply font-luxury text-gray-900;
     letter-spacing: 0.05em;
   }
 
   h1 {
-    @apply text-4xl sm:text-5xl md:text-6xl;
-    line-height: 1.2;
+    @apply text-4xl sm:text-5xl md:text-7xl font-extrabold;
+    line-height: 1.1;
   }
 
   h2 {
-    @apply text-3xl sm:text-4xl;
+    @apply text-3xl sm:text-5xl font-bold;
   }
 
   li {
-    @apply cursor-pointer font-luxury tracking-widest text-sm uppercase;
+    @apply cursor-pointer font-premium tracking-widest text-xs uppercase text-gray-600 hover:text-david-orange transition-colors;
   }
 
   button {
-    @apply shadow-embossed rounded-xl uppercase bg-sand-gray text-white px-8 py-3 transition-all duration-300 font-luxury tracking-[0.2em] text-sm;
+    @apply rounded-full uppercase bg-david-orange text-white px-8 py-4 transition-all duration-300 font-premium tracking-wider text-sm font-bold shadow-lg;
   }
 
   button:hover {
-    @apply shadow-embossed-sm scale-[0.98] text-white;
-    background-color: #1f1f1f;
+    @apply scale-105 brightness-110 shadow-xl;
   }
 
   button:active {
-    @apply shadow-debossed scale-95;
+    @apply scale-95;
   }
 
   .embossed-card {

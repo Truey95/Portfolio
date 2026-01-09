@@ -2,20 +2,20 @@
 export default function HeroText(): JSX.Element {
   return (
     <>
-      <div>
-        <p className="uppercase text-sm tracking-[0.3em] text-gray-400 font-luxury">
-          Let&apos;s build mobile & web applications.
+      <div className="flex flex-col items-center gap-6">
+        <p className="uppercase text-sm tracking-[0.4em] text-gray-500 font-bold">
+          Creative Developer & 3D Enthusiast
         </p>
+        <h1 className="text-gray-900 drop-shadow-sm font-black">
+          TREVOR <span className="text-david-orange">SMITH</span>
+        </h1>
+        <p className="py-2 text-gray-600 max-w-lg m-auto font-medium leading-relaxed text-lg">
+          Crafting immersive digital experiences through 3D web development and creative coding.
+        </p>
+        <button className="mt-4 hover:bg-david-blue hover:text-white">
+          Get in touch
+        </button>
       </div>
-
-      <h6 className="py-4 text-gray-400 tracking-widest uppercase text-xs">
-        Hello, I&apos;m <span className="text-white drop-shadow-sm font-luxury text-lg">Ricky Rollins</span>
-      </h6>
-      <h1 className="py-4 text-white uppercase tracking-widest">Software Engineer</h1>
-      <p className="py-4 text-gray-400 max-w-sm m-auto font-premium leading-relaxed">
-        Focused on building responsive, mobile-first web applications while
-        mastering high-end digital experiences.
-      </p>
     </>
   );
 }
