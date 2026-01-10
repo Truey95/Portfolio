@@ -8,7 +8,7 @@ import Projects from "../components/project/Projects";
 import Skills from "../components/skill/Skills";
 import Photos from "../components/Photos";
 import HandScroll from "../components/HandScroll";
-import { MainExperience } from "../components/scene/MainExperience";
+import SandBackground from "../components/SandBackground";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,7 +26,7 @@ export default function Home() {
         <title>Trevor Smith | Portfolio</title>
       </Head>
 
-      <MainExperience />
+      <SandBackground />
 
       <main className="relative z-10 pointer-events-none">
         <div className="pointer-events-auto">
