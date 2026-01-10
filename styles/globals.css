@@ -12,17 +12,30 @@ html {
 /* global styles for tailwind */
 @layer base {
   body {
-    @apply bg-david-beige text-gray-800 tracking-wider font-premium;
+    @apply bg-sand-black text-gray-300 tracking-wider font-premium;
     position: relative;
     width: 100%;
     min-height: 100vh;
     overflow-x: hidden;
   }
 
+  /* Kinetic Sand Texture Overlay */
+  body::before {
+    content: "";
+    @apply fixed inset-0 pointer-events-none z-[1];
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3%3Cfilter id='noiseFilter'%3%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3%3C/filter%3%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3%3C/svg%3");
+    opacity: 0.15;
+    mix-blend-mode: overlay;
+  }
+
   body::after {
     content: "";
-    @apply fixed inset-0 pointer-events-none opacity-40;
-    background: radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
+    @apply fixed inset-0 pointer-events-none opacity-60 z-[2];
+    background: radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+  }
+
+  section {
+    @apply relative z-[10];
   }
 
   h1,
@@ -31,13 +44,14 @@ html {
   h4,
   h5,
   h6 {
-    @apply font-luxury text-gray-900;
+    @apply font-luxury text-gray-100;
     letter-spacing: 0.05em;
   }
 
   h1 {
     @apply text-4xl sm:text-5xl md:text-7xl font-extrabold;
     line-height: 1.1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
 
   h2 {
@@ -45,37 +59,41 @@ html {
   }
 
   li {
-    @apply cursor-pointer font-premium tracking-widest text-xs uppercase text-gray-600 hover:text-david-orange transition-colors;
+    @apply cursor-pointer font-premium tracking-widest text-xs uppercase text-gray-400 hover:text-white transition-colors;
   }
 
   button {
-    @apply rounded-full uppercase bg-david-orange text-white px-8 py-4 transition-all duration-300 font-premium tracking-wider text-sm font-bold shadow-lg;
+    @apply rounded-xl uppercase bg-sand-gray text-gray-200 px-8 py-4 transition-all duration-300 font-premium tracking-wider text-sm font-bold shadow-embossed border border-white/5;
   }
 
   button:hover {
-    @apply scale-105 brightness-110 shadow-xl;
+    @apply -translate-y-0.5 shadow-embossed-hover text-white brightness-110;
   }
 
   button:active {
-    @apply scale-95;
+    @apply translate-y-0.5 shadow-debossed;
   }
 
   .embossed-card {
-    @apply bg-sand-gray shadow-embossed rounded-2xl border border-gray-900/50 backdrop-blur-sm transition-all duration-300;
+    @apply bg-sand-gray shadow-embossed rounded-2xl border border-white/5 backdrop-blur-sm transition-all duration-300;
   }
 
   .embossed-card:hover {
-    @apply -translate-y-1 shadow-embossed-hover;
+    @apply -translate-y-1 shadow-embossed-hover brightness-110;
+  }
+
+  .debossed-container {
+    @apply bg-sand-black shadow-debossed rounded-2xl border border-black/20;
   }
 
   .hand-indicator {
-    @apply fixed pointer-events-none rounded-full border-2 border-white/30 shadow-hand-glow z-[100] transition-opacity duration-300;
+    @apply fixed pointer-events-none rounded-full border-2 border-white/10 shadow-hand-glow z-[100] transition-opacity duration-300;
     width: 40px;
     height: 40px;
     transform: translate(-50%, -50%);
   }
 
   .hand-active {
-    @apply border-white/60 shadow-hand-glow-active;
+    @apply border-white/30 shadow-hand-glow-active;
   }
 }

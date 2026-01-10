@@ -7,21 +7,21 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'sand-black': '#0a0a0a',
-        'sand-gray': '#1a1a1a',
-        'sand-light': '#2a2a2a',
+        'sand-black': '#080808',
+        'sand-gray': '#121212',
+        'sand-light': '#1a1a1a',
         'david-beige': '#ECE9E1',
         'david-orange': '#F08A24',
         'david-blue': '#0A192F',
       },
       boxShadow: {
-        'embossed': '6px 6px 12px #050505, -6px -6px 12px #0f0f0f',
-        'debossed': 'inset 6px 6px 12px #050505, inset -6px -6px 12px #0f0f0f',
-        'embossed-sm': '3px 3px 6px #050505, -3px -3px 6px #0f0f0f',
-        'debossed-sm': 'inset 3px 3px 6px #050505, inset -3px -3px 6px #0f0f0f',
-        'embossed-hover': '8px 8px 16px #050505, -8px -8px 16px #121212',
-        'hand-glow': '0 0 15px rgba(255, 255, 255, 0.3)',
-        'hand-glow-active': '0 0 20px rgba(255, 255, 255, 0.5)',
+        'embossed': '4px 4px 8px #040404, -4px -4px 8px #0c0c0c',
+        'debossed': 'inset 4px 4px 8px #040404, inset -4px -4px 8px #0c0c0c',
+        'embossed-sm': '2px 2px 4px #040404, -2px -2px 4px #0c0c0c',
+        'debossed-sm': 'inset 2px 2px 4px #040404, inset -2px -2px 4px #0c0c0c',
+        'embossed-hover': '6px 6px 12px #040404, -6px -6px 12px #101010',
+        'hand-glow': '0 0 15px rgba(255, 255, 255, 0.2)',
+        'hand-glow-active': '0 0 20px rgba(255, 255, 255, 0.4)',
       },
       fontFamily: {
         'luxury': ['Cinzel', 'serif'],

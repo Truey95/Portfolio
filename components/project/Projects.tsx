@@ -11,7 +11,7 @@ import swdnnImg from "../../public/assets/projects/swdnn.png";
 function ProjectsContainer(): JSX.Element {
   return (
     <div className="grid md:grid-cols-3 gap-8">
-      
+
       <ProjectItem
         backgroundImg={aivrartImg}
         projectUrl="/aivrartech"
@@ -39,7 +39,7 @@ function ProjectsContainer(): JSX.Element {
         tech=""
         title="Pet Cora"
       />
-      
+
 
 
     </div>
@@ -51,7 +51,7 @@ export default function Projects(): JSX.Element {
   return (
     <div id="projects" className="w-full">
       <div className="max-w-7xl mx-auto px-2 py-16">
-        <p className="text-xl tracking-widest uppercase text-indigo-600 text-center xl:text-start pt-12 lg:pt-64">
+        <p className="text-xl tracking-widest uppercase text-gray-500 text-center xl:text-start pt-12 lg:pt-64">
           Projects
         </p>
         <h2 className="py-4 text-center xl:text-start">
