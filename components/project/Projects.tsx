@@ -7,41 +7,56 @@ import swdnnImg from "../../public/assets/projects/swdnn.png";
 
 
 
-// holds all project items in projects
-function ProjectsContainer(): JSX.Element {
+// holds all project items in projects with carousel behavior
+function ProjectsCarousel(): JSX.Element {
   return (
-    <div className="grid md:grid-cols-3 gap-8">
+    <div className="relative overflow-hidden py-10">
+      <div className="flex gap-8 animate-carousel-move hover:pause-animation">
+        {/* Repeating the list to ensure smooth infinite loop */}
+        {[1, 2].map((loop) => (
+          <div key={loop} className="flex gap-8 min-w-full">
+            <ProjectItem
+              backgroundImg={aivrartImg}
+              projectUrl="/aivrartech"
+              tech="Next.js"
+              title="Aivrar"
+            />
+            <ProjectItem
+              backgroundImg={nhpsImg}
+              projectUrl="/nhps"
+              tech="React"
+              title="NHPS"
+            />
+            <ProjectItem
+              backgroundImg={swdnnImg}
+              projectUrl="/swdnn"
+              tech="Static"
+              title="SWDNN"
+            />
+            <ProjectItem
+              backgroundImg={petcoraImg}
+              projectUrl="/petcoraa"
+              tech="Typescript"
+              title="Pet Cora"
+            />
+          </div>
+        ))}
+      </div>
 
-      <ProjectItem
-        backgroundImg={aivrartImg}
-        projectUrl="/aivrartech"
-        tech=""
-        title="Aivrar"
-      />
-
-      <ProjectItem
-        backgroundImg={nhpsImg}
-        projectUrl="/nhps"
-        tech=""
-        title="New Haven Phlebotomy School"
-      />
-
-      <ProjectItem
-        backgroundImg={swdnnImg}
-        projectUrl="/swdnn"
-        tech=""
-        title="She Wit Da Nupes Now"
-      />
-
-      <ProjectItem
-        backgroundImg={petcoraImg}
-        projectUrl="/petcoraa"
-        tech=""
-        title="Pet Cora"
-      />
-
-
-
+      <style jsx>{`
+        @keyframes carouselScroll {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        .animate-carousel-move {
+          display: flex;
+          width: fit-content;
+          animation: carouselScroll 40s linear infinite;
+        }
+        .hover\:pause-animation:hover {
+          animation-play-state: paused;
+        }
+      `}</style>
     </div>
   );
 }
@@ -50,14 +65,14 @@ function ProjectsContainer(): JSX.Element {
 export default function Projects(): JSX.Element {
   return (
     <div id="projects" className="w-full">
-      <div className="max-w-7xl mx-auto px-2 py-16">
-        <p className="text-xl tracking-widest uppercase text-gray-500 text-center xl:text-start pt-12 lg:pt-64">
+      <div className="max-w-[100vw] mx-auto px-4 py-16 overflow-hidden">
+        <p className="text-xl tracking-widest uppercase text-gray-500 text-center xl:text-start pt-12 lg:pt-32">
           Projects
         </p>
-        <h2 className="py-4 text-center xl:text-start">
-          Projects I loved Developing
+        <h2 className="py-4 text-center xl:text-start border-b border-white/5 mb-8">
+          Featured Developments
         </h2>
-        <ProjectsContainer />
+        <ProjectsCarousel />
       </div>
     </div>
   );

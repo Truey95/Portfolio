@@ -25,19 +25,23 @@ export default function ProjectItem(props: {
 }) {
   const { title, backgroundImg, projectUrl, tech } = props;
   return (
-    <div className="relative flex items-center justify-center h-auto w-full shadow-embossed rounded-xl group hover:bg-sand-black/80 transition-all duration-300">
-      <Image
-        alt="/"
-        className="rounded-xl group-hover:opacity-10"
-        src={backgroundImg}
-      />
-      <div className="hidden group-hover:block absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]">
-        <h3 className="text-2xl text-white tracking-wider text-center">
-          {title}
-        </h3>
-        <p className="pb-4 pt-2 text-white text-center">{tech}</p>
-        {ProjectItemButton({ projectUrl })}
+    <Link href={projectUrl}>
+      <div className="relative flex items-center justify-center h-[280px] w-[350px] shadow-debossed rounded-3xl group overflow-hidden bg-sand-black p-4 cursor-pointer hover:shadow-debossed-sm transition-all duration-300">
+        <div className="relative w-full h-full overflow-hidden rounded-2xl grayscale group-hover:grayscale-0 transition-all duration-500">
+          <Image
+            alt={title}
+            className="rounded-2xl group-hover:scale-110 transition-transform duration-700 object-cover"
+            src={backgroundImg}
+            fill
+          />
+          <div className="absolute inset-0 bg-sand-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4">
+            <h3 className="text-xl text-white tracking-wider text-center uppercase font-bold">
+              {title}
+            </h3>
+            <p className="pt-2 text-white/80 text-center text-xs tracking-widest">{tech}</p>
+          </div>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 }

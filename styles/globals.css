@@ -43,6 +43,20 @@ html {
   h3,
   h4,
   h5,
+  h6,
+  p,
+  li,
+  span,
+  button {
+    @apply rounded-3xl;
+    text-shadow: 1px 1px 0px #000, -1px -1px 0px rgba(255, 255, 255, 0.1), 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
   h6 {
     @apply font-luxury text-gray-100;
     letter-spacing: 0.05em;
@@ -51,7 +65,7 @@ html {
   h1 {
     @apply text-4xl sm:text-5xl md:text-7xl font-extrabold;
     line-height: 1.1;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 0px #000, -1px -1px 0px rgba(255, 255, 255, 0.15), 4px 4px 8px rgba(0, 0, 0, 0.9);
   }
 
   h2 {
@@ -59,11 +73,11 @@ html {
   }
 
   li {
-    @apply cursor-pointer font-premium tracking-widest text-xs uppercase text-gray-400 hover:text-white transition-colors;
+    @apply cursor-pointer font-premium tracking-widest text-xs uppercase text-gray-400 hover:text-white transition-colors rounded-full;
   }
 
   button {
-    @apply rounded-xl uppercase bg-sand-gray text-gray-200 px-8 py-4 transition-all duration-300 font-premium tracking-wider text-sm font-bold shadow-embossed border border-white/5;
+    @apply rounded-2xl uppercase bg-sand-gray text-gray-200 px-8 py-4 transition-all duration-300 font-premium tracking-wider text-sm font-bold shadow-embossed border border-white/5;
   }
 
   button:hover {
@@ -75,7 +89,7 @@ html {
   }
 
   .embossed-card {
-    @apply bg-sand-gray shadow-embossed rounded-2xl border border-white/5 backdrop-blur-sm transition-all duration-300;
+    @apply bg-sand-gray shadow-embossed rounded-3xl border border-white/5 backdrop-blur-sm transition-all duration-300;
   }
 
   .embossed-card:hover {
@@ -83,7 +97,7 @@ html {
   }
 
   .debossed-container {
-    @apply bg-sand-black shadow-debossed rounded-2xl border border-black/20;
+    @apply bg-sand-black shadow-debossed rounded-3xl border border-black/20;
   }
 
   .hand-indicator {

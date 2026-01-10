@@ -7,7 +7,7 @@ export default function HeroText(): JSX.Element {
           Creative Developer & 3D Enthusiast
         </p>
         <h1 className="text-gray-100 drop-shadow-sm font-black">
-          TREVOR <span className="text-white opacity-80">SMITH</span>
+          RICKY <span className="text-white opacity-90">ROLLINS</span>
         </h1>
         <p className="py-2 text-gray-400 max-w-lg m-auto font-medium leading-relaxed text-lg">
           Crafting immersive digital experiences through 3D web development and creative coding.
