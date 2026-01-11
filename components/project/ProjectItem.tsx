@@ -26,7 +26,7 @@ export default function ProjectItem(props: {
   const { title, backgroundImg, projectUrl, tech } = props;
   return (
     <Link href={projectUrl}>
-      <div className="relative flex items-center justify-center h-[280px] w-[350px] shadow-debossed rounded-3xl group overflow-hidden bg-sand-black p-4 cursor-pointer hover:shadow-debossed-sm transition-all duration-300">
+      <div className="relative flex items-center justify-center h-[280px] w-[350px] debossed-container group overflow-hidden p-4 cursor-pointer hover:shadow-debossed-sm transition-all duration-300">
         <div className="relative w-full h-full overflow-hidden rounded-2xl grayscale group-hover:grayscale-0 transition-all duration-500">
           <Image
             alt={title}
