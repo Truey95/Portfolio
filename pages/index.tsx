@@ -116,10 +116,27 @@ export default function Home() {
     window.addEventListener("wheel", handleWheel);
     window.addEventListener("touchstart", handleTouchStart);
     window.addEventListener("touchend", handleTouchEnd);
+
+    // Hash navigation integration
+    const handleHashChange = () => {
+      const hash = window.location.hash.replace("#", "");
+      const targetIdx = SECTIONS.findIndex((s) => s.id === hash);
+      if (targetIdx !== -1 && targetIdx !== index) {
+        goToSection(targetIdx);
+      }
+    };
+
+    window.addEventListener("hashchange", handleHashChange);
+    // Handle initial hash on load
+    if (window.location.hash) {
+      handleHashChange();
+    }
+
     return () => {
       window.removeEventListener("wheel", handleWheel);
       window.removeEventListener("touchstart", handleTouchStart);
       window.removeEventListener("touchend", handleTouchEnd);
+      window.removeEventListener("hashchange", handleHashChange);
     };
   }, [index, isTransitioning]);
 
