@@ -55,10 +55,10 @@ export default function Home() {
       // Recede outgoing
       tl.to(outgoing, {
         opacity: 0,
-        scale: 1.1,
-        filter: "blur(20px)",
-        duration: 0.8,
-        ease: "power2.inOut",
+        scale: 1.15,
+        filter: "blur(40px)",
+        duration: 1.5,
+        ease: "expo.inOut",
         onComplete: () => {
           gsap.set(outgoing, { pointerEvents: "none" });
         }
@@ -68,19 +68,19 @@ export default function Home() {
       tl.fromTo(incoming,
         {
           opacity: 0,
-          scale: 0.9,
-          filter: "blur(20px)",
+          scale: 0.85,
+          filter: "blur(40px)",
           pointerEvents: "none"
         },
         {
           opacity: 1,
           scale: 1,
           filter: "blur(0px)",
-          duration: 1,
-          ease: "power3.out",
+          duration: 1.8,
+          ease: "expo.out",
           pointerEvents: "auto"
         },
-        "-=0.6"
+        "-=1.2"
       );
     }
   };
