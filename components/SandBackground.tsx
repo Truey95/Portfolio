@@ -105,6 +105,40 @@ export default function SandBackground() {
                     />
                 ))}
             </div>
+
+            {/* Sand-Textured Planets */}
+            <div className="absolute inset-0 z-[1] overflow-hidden pointer-events-none">
+                {[
+                    { color: '#ff6b6b', size: 150, top: '15%', left: '10%', blur: '2px', scale: 1, opacity: 0.15 },
+                    { color: '#4facfe', size: 300, top: '60%', left: '80%', blur: '5px', scale: 0.8, opacity: 0.1 },
+                    { color: '#f093fb', size: 80, top: '40%', left: '60%', blur: '1px', scale: 1.2, opacity: 0.2 },
+                    { color: '#f6d365', size: 200, top: '10%', left: '85%', blur: '8px', scale: 0.5, opacity: 0.08 },
+                    { color: '#84fab0', size: 120, top: '80%', left: '15%', blur: '3px', scale: 0.9, opacity: 0.12 },
+                ].map((planet, i) => (
+                    <div
+                        key={`planet-${i}`}
+                        className="absolute rounded-full"
+                        style={{
+                            width: planet.size,
+                            height: planet.size,
+                            top: planet.top,
+                            left: planet.left,
+                            background: `radial-gradient(circle at 30% 30%, ${planet.color} 0%, transparent 80%)`,
+                            boxShadow: `inset -20px -20px 50px rgba(0,0,0,0.5), 10px 10px 30px rgba(0,0,0,0.3)`,
+                            filter: `blur(${planet.blur})`,
+                            transform: `scale(${planet.scale})`,
+                            opacity: planet.opacity,
+                        }}
+                    >
+                        {/* Sand Texture on the planet itself */}
+                        <div className="absolute inset-0 rounded-full opacity-40 mix-blend-overlay"
+                            style={{
+                                backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='planetGrain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23planetGrain)'/%3E%3C/svg%3E")`
+                            }}
+                        />
+                    </div>
+                ))}
+            </div>
         </div>
     );
 }
