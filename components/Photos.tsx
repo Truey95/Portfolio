@@ -25,7 +25,7 @@ const photos = [
 
 export default function Photos(): JSX.Element {
     return (
-        <section id="photos" className="w-full py-32 bg-transparent">
+        <section id="photos" className="w-full py-12 bg-transparent">
             <div className="max-w-7xl mx-auto px-6">
                 <p className="uppercase text-sm tracking-[0.3em] text-gray-500 text-center xl:text-start font-luxury mb-4">
                     Gallery

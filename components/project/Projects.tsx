@@ -65,11 +65,11 @@ function ProjectsCarousel(): JSX.Element {
 export default function Projects(): JSX.Element {
   return (
     <div id="projects" className="w-full">
-      <div className="max-w-[100vw] mx-auto px-4 py-16 overflow-hidden">
-        <p className="text-xl tracking-widest uppercase text-gray-500 text-center xl:text-start pt-12 lg:pt-32">
+      <div className="max-w-[100vw] mx-auto px-4 py-8 overflow-hidden">
+        <p className="text-xl tracking-widest uppercase text-gray-500 text-center xl:text-start pt-4 lg:pt-8">
           Projects
         </p>
-        <h2 className="py-4 text-center xl:text-start border-b border-white/5 mb-8">
+        <h2 className="py-2 text-center xl:text-start border-b border-white/5 mb-4">
           Featured Developments
         </h2>
         <ProjectsCarousel />

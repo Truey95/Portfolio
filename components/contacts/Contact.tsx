@@ -6,7 +6,7 @@ export default function Contact(): JSX.Element {
   return (
     <div
       id="contact"
-      className="w-full md:h-screen p-2 flex items-center py-16 md:py-32"
+      className="w-full h-auto p-2 flex items-center py-12"
     >
       <div className="max-w-7xl	m-auto md:grid grid-cols-2 gap-8">
         <ContactImage />
