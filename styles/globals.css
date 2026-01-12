@@ -60,7 +60,7 @@ html {
   span,
   button {
     @apply rounded-3xl;
-    text-shadow: var(--raised-text);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), -1px -1px 0px rgba(255, 255, 255, 0.05);
   }
 
   h1,
@@ -70,13 +70,13 @@ html {
   h5,
   h6 {
     @apply font-luxury text-white;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.08em;
   }
 
   h1 {
     @apply text-4xl sm:text-5xl md:text-7xl font-extrabold;
     line-height: 1.1;
-    text-shadow: var(--raised-text-lg);
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9), -2px -2px 0px rgba(255, 255, 255, 0.1);
   }
 
   h2 {
@@ -88,14 +88,20 @@ html {
   }
 
   button {
-    @apply rounded-2xl uppercase text-white px-8 py-4 transition-all duration-300 font-premium tracking-wider text-sm font-bold border border-white/5;
+    @apply rounded-2xl uppercase text-white px-8 py-4 transition-all duration-300 font-premium tracking-wider text-sm font-bold border border-white/5 relative overflow-hidden;
     background-color: var(--surface);
-    box-shadow: 6px 6px 12px var(--shadow-dark), -6px -6px 12px var(--shadow-light);
+    box-shadow: 8px 8px 16px var(--shadow-dark), -8px -8px 16px var(--shadow-light);
+  }
+
+  button::before {
+    content: "";
+    @apply absolute inset-0 opacity-[0.03] pointer-events-none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
   }
 
   button:hover {
     @apply -translate-y-0.5 text-white brightness-110;
-    box-shadow: 8px 8px 16px var(--shadow-dark), -8px -8px 16px var(--shadow-light);
+    box-shadow: 12px 12px 24px var(--shadow-dark), -12px -12px 24px var(--shadow-light);
   }
 
   button:active {
@@ -104,20 +110,32 @@ html {
   }
 
   .embossed-card {
-    @apply rounded-3xl border border-white/5 backdrop-blur-sm transition-all duration-300;
+    @apply rounded-3xl border border-white/5 backdrop-blur-sm transition-all duration-300 relative overflow-hidden;
     background-color: var(--surface);
-    box-shadow: 6px 6px 12px var(--shadow-dark), -6px -6px 12px var(--shadow-light);
+    box-shadow: 8px 8px 16px var(--shadow-dark), -8px -8px 16px var(--shadow-light);
+  }
+
+  .embossed-card::before {
+    content: "";
+    @apply absolute inset-0 opacity-[0.03] pointer-events-none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
   }
 
   .embossed-card:hover {
     @apply -translate-y-1 brightness-110;
-    box-shadow: 12px 12px 24px var(--shadow-dark), -12px -12px 24px var(--shadow-light);
+    box-shadow: 16px 16px 32px var(--shadow-dark), -16px -16px 32px var(--shadow-light);
   }
 
   .debossed-container {
-    @apply rounded-3xl border border-black/20;
+    @apply rounded-3xl border border-black/20 relative overflow-hidden;
     background-color: var(--bg);
-    box-shadow: inset 6px 6px 12px var(--shadow-dark), inset -6px -6px 12px var(--shadow-light);
+    box-shadow: inset 8px 8px 16px var(--shadow-dark), inset -8px -8px 16px var(--shadow-light);
+  }
+
+  .debossed-container::before {
+    content: "";
+    @apply absolute inset-0 opacity-[0.03] pointer-events-none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
   }
 
   .hand-indicator {
