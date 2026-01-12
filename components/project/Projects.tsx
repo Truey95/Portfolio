@@ -4,6 +4,7 @@ import nhpsImg from "../../public/assets/projects/nhps.png";
 import aivrartImg from "../../public/assets/projects/aivrart.png";
 import petcoraImg from "../../public/assets/projects/petcora.png";
 import swdnnImg from "../../public/assets/projects/swdnn.png";
+import legalPresenceImg from "../../public/assets/projects/legal_presence.png";
 
 
 
@@ -38,6 +39,12 @@ function ProjectsCarousel(): JSX.Element {
               projectUrl="/petcoraa"
               tech="Typescript"
               title="Pet Cora"
+            />
+            <ProjectItem
+              backgroundImg={legalPresenceImg}
+              projectUrl="/legalpresence"
+              tech="Open Source AI"
+              title="LegalPresence"
             />
           </div>
         ))}
