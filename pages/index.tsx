@@ -49,6 +49,10 @@ export default function Home() {
         onComplete: () => {
           setIsTransitioning(false);
           setIndex(nextIndex);
+          // Sync URL hash with current section
+          if (window.location.hash !== `#${SECTIONS[nextIndex].id}`) {
+            window.history.replaceState(null, "", `#${SECTIONS[nextIndex].id}`);
+          }
         }
       });
 
@@ -57,8 +61,8 @@ export default function Home() {
         opacity: 0,
         scale: 1.15,
         filter: "blur(40px)",
-        duration: 1.5,
-        ease: "expo.inOut",
+        duration: 0.8,
+        ease: "power4.inOut",
         onComplete: () => {
           gsap.set(outgoing, { pointerEvents: "none" });
         }
@@ -76,23 +80,30 @@ export default function Home() {
           opacity: 1,
           scale: 1,
           filter: "blur(0px)",
-          duration: 1.8,
-          ease: "expo.out",
+          duration: 1.0,
+          ease: "power4.out",
           pointerEvents: "auto"
         },
-        "-=1.2"
+        "-=0.6"
       );
     }
   };
 
+  const lastTriggerRef = useRef(0);
+  const cooldown = 1000; // ms
+
   useEffect(() => {
     const handleWheel = (e: WheelEvent) => {
+      const now = Date.now();
+      if (now - lastTriggerRef.current < cooldown) return;
+
       if (Math.abs(e.deltaY) > 20) {
         if (e.deltaY > 0) {
           goToSection(index + 1);
         } else {
           goToSection(index - 1);
         }
+        lastTriggerRef.current = now;
       }
     };
 
@@ -102,14 +113,18 @@ export default function Home() {
     };
 
     const handleTouchEnd = (e: TouchEvent) => {
+      const now = Date.now();
+      if (now - lastTriggerRef.current < cooldown) return;
+
       const touchEndY = e.changedTouches[0].clientY;
       const diff = touchStartY - touchEndY;
-      if (Math.abs(diff) > 50) {
+      if (Math.abs(diff) > 30) {
         if (diff > 0) {
           goToSection(index + 1);
         } else {
           goToSection(index - 1);
         }
+        lastTriggerRef.current = now;
       }
     };
 

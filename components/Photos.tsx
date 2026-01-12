@@ -28,20 +28,23 @@ function PhotosCarousel(): JSX.Element {
         <div className="relative overflow-hidden py-10">
             <div className="flex gap-8 animate-photos-move hover:pause-animation">
                 {[1, 2].map((loop) => (
-                    <div key={loop} className="flex gap-8 min-w-full">
+                    <div key={loop} className="flex gap-12 min-w-full">
                         {photos.map((photo, index) => (
                             <div
                                 key={`${loop}-${index}`}
-                                className="relative h-[280px] w-[280px] shrink-0 overflow-hidden rounded-xl debossed-container group hover:scale-[1.02] transition-all duration-500"
+                                className="relative h-[320px] w-[320px] shrink-0 overflow-hidden rounded-2xl debossed-container group hover:scale-[1.02] transition-all duration-700 ease-out"
                             >
                                 <Image
                                     src={photo.src}
                                     alt={photo.alt}
                                     fill
-                                    className="object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-500"
+                                    className="object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-700"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
-                                    <p className="font-luxury text-[10px] uppercase tracking-widest text-white/70">{photo.title}</p>
+                                {/* Acid-washed sand texture overlay */}
+                                <div className="absolute inset-0 opacity-10 pointer-events-none mix-blend-overlay bg-[url('https://www.transparenttextures.com/patterns/sandpaper.png')]" />
+
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 flex flex-col justify-end p-8">
+                                    <p className="font-luxury text-[11px] uppercase tracking-[0.3em] text-white/80">{photo.title}</p>
                                 </div>
                             </div>
                         ))}
@@ -57,7 +60,8 @@ function PhotosCarousel(): JSX.Element {
                 .animate-photos-move {
                     display: flex;
                     width: fit-content;
-                    animation: photosScroll 30s linear infinite;
+                    gap: 3rem; /* matches gap-12 */
+                    animation: photosScroll 40s linear infinite;
                 }
                 .hover\:pause-animation:hover {
                     animation-play-state: paused;
