@@ -38,7 +38,7 @@ export default function ProjectItem(props: {
             <h3 className="text-xl text-white tracking-wider text-center uppercase font-bold">
               {title}
             </h3>
-            <p className="pt-2 text-white/80 text-center text-xs tracking-widest">{tech}</p>
+            <p className="pt-2 text-white text-center text-xs tracking-widest">{tech}</p>
           </div>
         </div>
       </div>

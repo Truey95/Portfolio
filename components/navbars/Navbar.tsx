@@ -59,7 +59,7 @@ export default function Navbar(): JSX.Element {
           <li
             key={link.text}
             onClick={() => setNav(false)}
-            className="py-4 text-sm tracking-widest text-gray-400 hover:text-white transition-colors"
+            className="py-4 text-sm tracking-widest text-white hover:text-white transition-colors"
           >
             <Link scroll={false} href={link.href}>
               {link.text}
@@ -100,7 +100,7 @@ export default function Navbar(): JSX.Element {
       <>
         <div className="relative">{<SideMenuTopCloseButton />}</div>
         <div className="border-b border-gray-900">
-          <p className="w-10/12 sm:w-11/12 py-4 font-luxury tracking-widest text-xs text-gray-400">
+          <p className="w-10/12 sm:w-11/12 py-4 font-luxury tracking-widest text-xs text-white">
             CRAFTING DIGITAL ELEGANCE
           </p>
         </div>

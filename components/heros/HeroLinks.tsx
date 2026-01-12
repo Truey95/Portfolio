@@ -11,7 +11,7 @@ export default function HeroLinks(): JSX.Element {
           aria-label={hero.label}
           href={hero.href}
           target="_blank"
-          className="text-2xl p-4 bg-sand-gray rounded-xl text-gray-200 shadow-embossed border border-white/5 hover:shadow-embossed-hover hover:text-white hover:-translate-y-1 transition-all duration-300"
+          className="text-2xl p-4 bg-sand-gray rounded-xl text-white shadow-embossed border border-white/5 hover:shadow-embossed-hover hover:text-white hover:-translate-y-1 transition-all duration-300"
         >
           {hero.icon}
         </Link>

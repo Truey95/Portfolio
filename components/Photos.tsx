@@ -44,7 +44,7 @@ function PhotosCarousel(): JSX.Element {
                                 <div className="absolute inset-0 opacity-10 pointer-events-none mix-blend-overlay bg-[url('https://www.transparenttextures.com/patterns/sandpaper.png')]" />
 
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 flex flex-col justify-end p-8">
-                                    <p className="font-luxury text-[11px] uppercase tracking-[0.3em] text-white/80">{photo.title}</p>
+                                    <p className="font-luxury text-[11px] uppercase tracking-[0.3em] text-white">{photo.title}</p>
                                 </div>
                             </div>
                         ))}
@@ -75,10 +75,10 @@ export default function Photos(): JSX.Element {
     return (
         <section id="photos" className="w-full py-12 bg-transparent flex items-center">
             <div className="max-w-[100vw] mx-auto px-6 overflow-hidden w-full">
-                <p className="uppercase text-sm tracking-[0.3em] text-gray-500 text-center xl:text-start font-luxury mb-4">
+                <p className="uppercase text-sm tracking-[0.3em] text-white text-center xl:text-start font-luxury mb-4">
                     Gallery
                 </p>
-                <h2 className="text-center xl:text-start uppercase tracking-wider mb-8 text-3xl font-luxury bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent border-b border-white/5 pb-4">
+                <h2 className="text-center xl:text-start uppercase tracking-wider mb-8 text-3xl font-luxury text-white border-b border-white/5 pb-4">
                     Captured Moments
                 </h2>
 

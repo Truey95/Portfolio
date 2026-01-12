@@ -23,7 +23,7 @@ export default function NavbarBottomSideMenu(): JSX.Element {
 
   return (
     <div className="pt-20">
-      <p className="uppercase tracking-[0.3em] text-gray-500 font-luxury text-sm">
+      <p className="uppercase tracking-[0.3em] text-white font-luxury text-sm">
         Connect
       </p>
 

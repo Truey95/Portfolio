@@ -23,7 +23,7 @@ html {
 @layer base {
   body {
     background-color: var(--bg);
-    @apply text-gray-300 tracking-wider font-premium;
+    @apply text-white tracking-wider font-premium;
     position: relative;
     width: 100%;
     min-height: 100vh;
@@ -69,7 +69,7 @@ html {
   h4,
   h5,
   h6 {
-    @apply font-luxury text-gray-100;
+    @apply font-luxury text-white;
     letter-spacing: 0.05em;
   }
 
@@ -84,11 +84,11 @@ html {
   }
 
   li {
-    @apply cursor-pointer font-premium tracking-widest text-xs uppercase text-gray-400 hover:text-white transition-colors rounded-full;
+    @apply cursor-pointer font-premium tracking-widest text-xs uppercase text-white transition-colors rounded-full;
   }
 
   button {
-    @apply rounded-2xl uppercase text-gray-200 px-8 py-4 transition-all duration-300 font-premium tracking-wider text-sm font-bold border border-white/5;
+    @apply rounded-2xl uppercase text-white px-8 py-4 transition-all duration-300 font-premium tracking-wider text-sm font-bold border border-white/5;
     background-color: var(--surface);
     box-shadow: 6px 6px 12px var(--shadow-dark), -6px -6px 12px var(--shadow-light);
   }

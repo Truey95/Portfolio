@@ -12,7 +12,7 @@ export default function TechStack(props: {
         <p className="text-center font-bold pb-2">Tech Stacks</p>
         <div className="grid grid-cols-2 md:grid-cols-1 text-sm lg:text-base">
           {data.map((e) => (
-            <p key={e} className="text-gray-600 py-2 flex items-center">
+            <p key={e} className="text-white py-2 flex items-center">
               <RiRadioButtonFill className="pr-1 mr-1" />
               {e}
             </p>

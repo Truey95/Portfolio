@@ -17,7 +17,7 @@ export default function SkillsContainer(): JSX.Element {
           >
             <div className={skillData.style}>{skillData.icon}</div>
             <div className="flex flex-col items-start justify-center text-xs lg:text-sm">
-              <h3 className="uppercase tracking-widest font-luxury text-gray-200">{skillData.h3}</h3>
+              <h3 className="uppercase tracking-widest font-luxury text-white">{skillData.h3}</h3>
             </div>
           </Link>
         </div>

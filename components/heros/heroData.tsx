@@ -13,7 +13,7 @@ export const heroData = [
     label: "linkedin",
     href: "https://www.linkedin.com/in/trevor-smith-b827a0192/",
     style:
-      "rounded-full shadow-embossed p-6 cursor-pointer hover:shadow-embossed-sm hover:scale-105 transition-all duration-300 bg-sand-gray text-gray-400 hover:text-white",
+      "rounded-full shadow-embossed p-6 cursor-pointer hover:shadow-embossed-sm hover:scale-105 transition-all duration-300 bg-sand-gray text-white",
     icon: <FaLinkedinIn />,
   },
 

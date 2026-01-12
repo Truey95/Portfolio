@@ -9,7 +9,7 @@ export const contactButtons = [
   },
   {
     button: <FaLinkedinIn />,
-    className: "rounded-full m-0.02 p-6 shadow-embossed cursor-pointer hover:shadow-embossed-sm hover:scale-105 transition-all duration-300 bg-sand-gray text-gray-400 hover:text-white",
+    className: "rounded-full m-0.02 p-6 shadow-embossed cursor-pointer hover:shadow-embossed-sm hover:scale-105 transition-all duration-300 bg-sand-gray text-white",
     href: "https://www.linkedin.com/in/trevor-smith-portfolio/",
     label: "LinkedinIn",
   },
