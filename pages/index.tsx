@@ -4,6 +4,7 @@ import { Inter } from "@next/font/google";
 import { gsap } from "gsap";
 
 import About from "../components/About";
+import Journey from "../components/Journey";
 import Contact from "../components/contacts/Contact";
 import Hero from "../components/heros/Hero";
 import Projects from "../components/project/Projects";
@@ -17,6 +18,7 @@ const SECTIONS = [
   { id: "hero", component: Hero },
   { id: "projects", component: Projects },
   { id: "photos", component: Photos },
+  { id: "journey", component: Journey },
   { id: "about", component: About },
   { id: "skills", component: Skills },
   { id: "contact", component: Contact },
