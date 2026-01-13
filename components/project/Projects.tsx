@@ -9,61 +9,104 @@ import legalPresenceImg from "../../public/assets/projects/legal_presence.png";
 
 
 // holds all project items in projects with carousel behavior
+import { useState, useRef, useEffect } from "react";
+
+const projectData = [
+  { img: aivrartImg, url: "/aivrartech", tech: "Next.js", title: "Aivrar" },
+  { img: nhpsImg, url: "/nhps", tech: "React", title: "NHPS" },
+  { img: swdnnImg, url: "/swdnn", tech: "Static", title: "SWDNN" },
+  { img: petcoraImg, url: "/petcoraa", tech: "Typescript", title: "Pet Cora" },
+  { img: legalPresenceImg, url: "/legalpresence", tech: "Open Source AI", title: "LegalPresence" },
+];
+
 function ProjectsCarousel(): JSX.Element {
+  const [scrollX, setScrollX] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [hasMoved, setHasMoved] = useState(false);
+  const carouselRef = useRef<HTMLDivElement>(null);
+
+  const onDragStart = (e: React.MouseEvent | React.TouchEvent) => {
+    setIsDragging(true);
+    setHasMoved(false);
+    const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
+    setStartX(clientX - scrollX);
+  };
+
+  const onDragMove = (e: React.MouseEvent | React.TouchEvent) => {
+    if (!isDragging) return;
+    const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
+    const x = clientX - startX;
+
+    // Bounds check
+    if (carouselRef.current) {
+      const containerWidth = carouselRef.current.parentElement?.offsetWidth || 0;
+      const totalWidth = carouselRef.current.scrollWidth;
+      const minScroll = containerWidth - totalWidth;
+
+      if (x > 0) {
+        setScrollX(x * 0.2); // Rubber banding
+      } else if (x < minScroll) {
+        setScrollX(minScroll + (x - minScroll) * 0.2);
+      } else {
+        setScrollX(x);
+      }
+    }
+
+    if (Math.abs(clientX - (startX + scrollX)) > 5) {
+      setHasMoved(true);
+    }
+  };
+
+  const onDragEnd = () => {
+    setIsDragging(false);
+    if (carouselRef.current) {
+      const containerWidth = carouselRef.current.parentElement?.offsetWidth || 0;
+      const totalWidth = carouselRef.current.scrollWidth;
+      const minScroll = Math.min(0, containerWidth - totalWidth - 40);
+
+      if (scrollX > 0) {
+        setScrollX(0);
+      } else if (scrollX < minScroll) {
+        setScrollX(minScroll);
+      }
+    }
+  };
+
+  // Prevent default link behavior if dragging
+  const handleItemClick = (e: React.MouseEvent) => {
+    if (hasMoved) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+  };
+
   return (
-    <div className="relative overflow-hidden py-10">
-      <div className="flex gap-8 animate-carousel-move hover:pause-animation">
-        {/* Repeating the list to ensure smooth infinite loop */}
-        {[1, 2].map((loop) => (
-          <div key={loop} className="flex gap-8 min-w-full">
+    <div className="relative overflow-hidden py-10 cursor-grab active:cursor-grabbing select-none"
+      onMouseDown={onDragStart}
+      onMouseMove={onDragMove}
+      onMouseUp={onDragEnd}
+      onMouseLeave={onDragEnd}
+      onTouchStart={onDragStart}
+      onTouchMove={onDragMove}
+      onTouchEnd={onDragEnd}
+    >
+      <div
+        ref={carouselRef}
+        className="flex gap-8 transition-transform duration-300 ease-out will-change-transform"
+        style={{ transform: `translateX(${scrollX}px)`, transition: isDragging ? 'none' : 'transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1)' }}
+      >
+        {projectData.map((project, i) => (
+          <div key={i} onClickCapture={handleItemClick}>
             <ProjectItem
-              backgroundImg={aivrartImg}
-              projectUrl="/aivrartech"
-              tech="Next.js"
-              title="Aivrar"
-            />
-            <ProjectItem
-              backgroundImg={nhpsImg}
-              projectUrl="/nhps"
-              tech="React"
-              title="NHPS"
-            />
-            <ProjectItem
-              backgroundImg={swdnnImg}
-              projectUrl="/swdnn"
-              tech="Static"
-              title="SWDNN"
-            />
-            <ProjectItem
-              backgroundImg={petcoraImg}
-              projectUrl="/petcoraa"
-              tech="Typescript"
-              title="Pet Cora"
-            />
-            <ProjectItem
-              backgroundImg={legalPresenceImg}
-              projectUrl="/legalpresence"
-              tech="Open Source AI"
-              title="LegalPresence"
+              backgroundImg={project.img}
+              projectUrl={project.url}
+              tech={project.tech}
+              title={project.title}
             />
           </div>
         ))}
       </div>
-
-      <style jsx>{`
-        @keyframes carouselScroll {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-        .animate-carousel-move {
-          display: flex;
-          width: fit-content;
-          animation: carouselScroll 40s linear infinite;
-        }
-        .hover\:pause-animation:hover {
-          animation-play-state: paused;
-        }
-      `}</style>
     </div>
   );
 }
