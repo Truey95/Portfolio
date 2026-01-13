@@ -10,7 +10,7 @@ export default function SandBackground() {
                 }}
             />
 
-            {/* stars */}
+            {/* Stars */}
             <div className="absolute inset-0 z-[1] opacity-60">
                 <style jsx>{`
                     @keyframes sparkle {
@@ -21,21 +21,11 @@ export default function SandBackground() {
                         from { transform: rotate(0deg); }
                         to { transform: rotate(360deg); }
                     }
-                    @keyframes warp {
-                        0%, 100% { transform: scale(1) rotate(0deg); filter: blur(2px); }
-                        50% { transform: scale(1.1) rotate(180deg); filter: blur(5px); }
-                    }
                     @keyframes shootingStar {
                         0% { transform: translateX(0) translateY(0) rotate(-45deg) scale(0); opacity: 0; }
                         5% { opacity: 1; scale(1); }
                         15% { transform: translateX(-800px) translateY(800px) rotate(-45deg) scale(0.5); opacity: 0; }
                         100% { transform: translateX(-800px) translateY(800px) rotate(-45deg) scale(0); opacity: 0; }
-                    }
-                    @keyframes ufoFly {
-                        0% { transform: translate(120vw, 20vh) scale(0.5); }
-                        45% { transform: translate(50vw, 40vh) scale(0.8); }
-                        55% { transform: translate(45vw, 38vh) scale(0.8); }
-                        100% { transform: translate(-20vw, 80vh) scale(0.5); }
                     }
                     .star {
                         position: absolute;
@@ -48,27 +38,6 @@ export default function SandBackground() {
                         height: 2px;
                         background: linear-gradient(90deg, white, transparent);
                         opacity: 0;
-                    }
-                    .ufo {
-                        position: absolute;
-                        width: 40px;
-                        height: 15px;
-                        background: #1a1a1a;
-                        border-radius: 50% 50% 40% 40%;
-                        box-shadow: 0 5px 15px rgba(0,0,0,0.5), inset 0 2px 5px rgba(255,255,255,0.1);
-                        border-bottom: 2px solid rgba(255,255,255,0.05);
-                    }
-                    .ufo-light {
-                        position: absolute;
-                        bottom: 2px;
-                        left: 50%;
-                        transform: translateX(-50%);
-                        width: 20px;
-                        height: 4px;
-                        background: #4facfe;
-                        border-radius: 50%;
-                        filter: blur(2px);
-                        animation: sparkle 0.5s infinite;
                     }
                 `}</style>
 
@@ -102,29 +71,15 @@ export default function SandBackground() {
                         }}
                     />
                 ))}
-
-                {/* UFOs */}
-                {[...Array(3)].map((_, i) => (
-                    <div
-                        key={`ufo-${i}`}
-                        className="ufo"
-                        style={{
-                            top: `${20 + Math.random() * 60}%`,
-                            animation: `ufoFly ${15 + Math.random() * 15}s infinite linear`,
-                            animationDelay: `${Math.random() * 30}s`
-                        }}
-                    >
-                        <div className="ufo-light" style={{ background: i % 2 === 0 ? '#ff6b6b' : '#4facfe' }} />
-                    </div>
-                ))}
             </div>
 
-            {/* Spinning Planets */}
+            {/* Spinning Planets with Depth */}
             <div className="absolute inset-0 z-[1] overflow-hidden pointer-events-none">
                 {[
-                    { color: '#1a1a1a', size: 280, top: '15%', left: '70%', dur: '120s', shadow: '#050505', glow: 'rgba(255,255,255,0.02)' },
-                    { color: '#121212', size: 120, top: '65%', left: '15%', dur: '80s', shadow: '#030303', glow: 'rgba(255,255,255,0.01)' },
-                    { color: '#0d0d0d', size: 180, top: '40%', left: '80%', dur: '150s', shadow: '#020202', glow: 'rgba(255,255,255,0.015)' },
+                    { color: '#1a1a1a', size: 320, top: '15%', left: '70%', dur: '120s', shadow: '#050505', glow: 'rgba(255,255,255,0.02)', blur: '0px', scale: 1 },
+                    { color: '#121212', size: 120, top: '65%', left: '15%', dur: '80s', shadow: '#030303', glow: 'rgba(255,255,255,0.01)', blur: '2px', scale: 0.8 },
+                    { color: '#0d0d0d', size: 180, top: '40%', left: '80%', dur: '150s', shadow: '#020202', glow: 'rgba(255,255,255,0.015)', blur: '4px', scale: 0.6 },
+                    { color: '#080808', size: 60, top: '80%', left: '40%', dur: '200s', shadow: '#010101', glow: 'rgba(255,255,255,0.005)', blur: '8px', scale: 0.4 },
                 ].map((planet, i) => (
                     <div
                         key={`planet-${i}`}
@@ -138,43 +93,15 @@ export default function SandBackground() {
                             backgroundColor: planet.color,
                             boxShadow: `inset -20px -20px 60px ${planet.shadow}, 20px 20px 40px rgba(0,0,0,0.8), 0 0 20px ${planet.glow}`,
                             animation: `rotateSlow ${planet.dur} infinite linear`,
+                            filter: `blur(${planet.blur})`,
+                            transform: `scale(${planet.scale})`,
                         }}
                     >
                         {/* Sand texture on planet surface */}
                         <div className="absolute inset-0 rounded-full opacity-[0.15] mix-blend-overlay"
                             style={{
-                                backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='pGrain'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23pGrain)'/%3E%3C/svg%3E")`
+                                backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='pGrain-${i}'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23pGrain-${i})'/%3E%3C/svg%3E")`
                             }}
-                        />
-                    </div>
-                ))}
-            </div>
-
-            {/* Black Holes */}
-            <div className="absolute inset-0 z-[1] overflow-hidden pointer-events-none">
-                {[
-                    { size: 200, top: '25%', left: '15%' },
-                    { size: 150, top: '75%', left: '85%' },
-                ].map((bh, i) => (
-                    <div
-                        key={`bh-${i}`}
-                        className="absolute rounded-full"
-                        style={{
-                            width: bh.size,
-                            height: bh.size,
-                            top: bh.top,
-                            left: bh.left,
-                            background: 'black',
-                            boxShadow: `0 0 40px rgba(0,0,0,1), inset 0 0 30px rgba(255,255,255,0.05)`,
-                            animation: `warp 20s infinite ease-in-out`,
-                            animationDelay: `${i * 10}s`
-                        }}
-                    >
-                        <div className="absolute inset-0 rounded-full"
-                            style={{ border: '1px solid rgba(255,255,255,0.03)', transform: 'scale(1.2)' }}
-                        />
-                        <div className="absolute inset-0 rounded-full"
-                            style={{ border: '1px solid rgba(255,255,255,0.02)', transform: 'scale(1.4)' }}
                         />
                     </div>
                 ))}
