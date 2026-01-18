@@ -9,7 +9,7 @@ function ProjectItemButton({
 }): JSX.Element {
   return (
     <Link href={projectUrl}>
-      <p className="text-center py-3 rounded-lg bg-sand-gray text-white font-bold cursor-pointer shadow-embossed-sm hover:shadow-debossed transition-all">
+      <p className="text-center py-3 rounded-4xl bg-sand-gray text-white font-bold cursor-pointer shadow-embossed-sm hover:translate-y-[2px] active:shadow-debossed transition-all">
         View
       </p>
     </Link>
@@ -26,15 +26,15 @@ export default function ProjectItem(props: {
   const { title, backgroundImg, projectUrl, tech } = props;
   return (
     <Link href={projectUrl}>
-      <div className="relative flex items-center justify-center h-[280px] w-[350px] debossed-container group overflow-hidden p-4 cursor-pointer hover:shadow-debossed-sm transition-all duration-300">
-        <div className="relative w-full h-full overflow-hidden rounded-2xl grayscale group-hover:grayscale-0 transition-all duration-500">
+      <div className="relative flex items-center justify-center h-[280px] w-[350px] embossed-card group overflow-hidden p-3 cursor-pointer">
+        <div className="relative w-full h-full overflow-hidden rounded-4xl grayscale group-hover:grayscale-0 transition-all duration-500 debossed-container border-none">
           <Image
             alt={title}
-            className="rounded-2xl group-hover:scale-110 transition-transform duration-700 object-cover"
+            className="group-hover:scale-110 transition-transform duration-700 object-cover"
             src={backgroundImg}
             fill
           />
-          <div className="absolute inset-0 bg-sand-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4">
+          <div className="absolute inset-0 bg-sand-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4">
             <h3 className="text-xl text-white tracking-wider text-center uppercase font-bold">
               {title}
             </h3>

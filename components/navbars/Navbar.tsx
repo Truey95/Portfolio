@@ -45,12 +45,12 @@ export default function Navbar(): JSX.Element {
     : "invisible";
 
   const showHideSideMenu: string = nav
-    ? "fixed left-0 top-0 w-9/12 h-screen bg-sand-black p-8 ease-in duration-500 border-r border-gray-900"
+    ? "fixed left-0 top-0 w-9/12 h-screen bg-sand-base p-8 ease-in duration-500 border-r border-white/5 debossed-container"
     : "fixed left-[-100%] top-0 p-10 ease-in duration-500";
 
   const showHideShadow: string = shadow
-    ? "fixed w-full h-20 shadow-embossed z-50 ease-in-out duration-300"
-    : "fixed w-full h-20 z-50";
+    ? "fixed w-full h-20 shadow-embossed z-50 ease-in-out duration-300 rounded-none border-none bg-sand-base/40 backdrop-blur-md"
+    : "fixed w-full h-20 z-50 bg-transparent";
 
   // links found in the navbar component
   function SideMenuNavbarLinks(): JSX.Element {
@@ -113,7 +113,7 @@ export default function Navbar(): JSX.Element {
       return (
         <div
           onClick={handleNav}
-          className="rounded-full shadow-embossed p-2 cursor-pointer absolute top-0 right-0 bg-sand-gray text-white"
+          className="rounded-full embossed-card p-3 cursor-pointer absolute top-0 right-0"
         >
           <AiOutlineClose />
         </div>
@@ -123,7 +123,7 @@ export default function Navbar(): JSX.Element {
 
   return (
     <div className={showHideShadow}>
-      <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16 bg-sand-black/90 backdrop-blur-md border-b border-gray-900">
+      <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16 container mx-auto">
         <NavbarLogoGlobal />
         <NavbarLinks />
       </div>

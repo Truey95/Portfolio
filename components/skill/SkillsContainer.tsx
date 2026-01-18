@@ -8,7 +8,7 @@ export default function SkillsContainer(): JSX.Element {
       {skillsData.map((skillData) => (
         <div
           key={skillData.h3}
-          className="p-6 shadow-embossed rounded-xl hover:shadow-embossed-sm hover:scale-[1.02] transition-all duration-300 bg-sand-gray border border-gray-900/30"
+          className="p-6 embossed-card rounded-4xl hover:scale-[1.02] transition-all duration-300"
         >
           <Link
             href={skillData.href}

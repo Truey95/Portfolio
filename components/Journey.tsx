@@ -29,7 +29,7 @@ export default function Journey(): JSX.Element {
                                 style={{ top: '2rem' }} />
 
                             <div className={`w-full md:w-[45%] ${index % 2 === 0 ? 'md:mr-auto' : 'md:ml-auto'}`}>
-                                <div className="embossed-card p-8 group hover:scale-[1.02] transition-transform duration-500">
+                                <div className="embossed-card p-8 group hover:scale-[1.02] transition-transform duration-500 rounded-5xl">
                                     <div className="flex justify-between items-start mb-4">
                                         <span className="text-[10px] tracking-[0.3em] uppercase text-white/60 font-luxury italic">
                                             {job.year}
@@ -42,14 +42,14 @@ export default function Journey(): JSX.Element {
                                     <h3 className="text-xl font-luxury text-white mb-1 uppercase tracking-wider">{job.company}</h3>
                                     <p className="text-sm font-premium text-white/80 mb-4 italic">{job.role}</p>
 
-                                    <div className="bg-white/5 p-4 rounded-xl border border-white/10 mb-6">
+                                    <div className="debossed-container p-4 rounded-4xl border-none mb-6">
                                         <p className="text-[11px] uppercase tracking-[0.2em] text-white/90 font-bold mb-1">Layer Depth:</p>
                                         <p className="text-xs text-white/70 italic">{job.layer}</p>
                                     </div>
 
                                     <ul className="space-y-3">
                                         {job.description.map((item, i) => (
-                                            <li key={i} className="flex gap-3 text-sm text-white/80 font-premium leading-relaxed border-none lowercase p-0 hover:bg-transparent">
+                                            <li key={i} className="flex gap-3 text-sm text-white/80 font-premium leading-relaxed border-none lowercase p-0 hover:bg-transparent rounded-none">
                                                 <span className="text-white opacity-40 mt-1">•</span>
                                                 {item}
                                             </li>

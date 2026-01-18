@@ -104,14 +104,16 @@ function PhotosCarousel(): JSX.Element {
                     <div
                         key={index}
                         onClick={() => handlePhotoClick(photo)}
-                        className="relative h-[320px] w-[320px] shrink-0 overflow-hidden rounded-2xl debossed-container group hover:scale-[1.02] transition-all duration-700 ease-out"
+                        className="relative h-[320px] w-[320px] shrink-0 overflow-hidden embossed-card p-3 group hover:scale-[1.02] transition-all duration-700 ease-out"
                     >
-                        <Image
-                            src={photo.src}
-                            alt={photo.alt}
-                            fill
-                            className="object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
-                        />
+                        <div className="relative w-full h-full overflow-hidden rounded-4xl debossed-container border-none">
+                            <Image
+                                src={photo.src}
+                                alt={photo.alt}
+                                fill
+                                className="object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
+                            />
+                        </div>
                         {/* Acid-washed sand texture overlay */}
                         <div className="absolute inset-0 opacity-10 pointer-events-none mix-blend-overlay bg-[url('https://www.transparenttextures.com/patterns/sandpaper.png')]" />
 

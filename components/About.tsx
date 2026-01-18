@@ -17,7 +17,7 @@ function AboutText(): JSX.Element {
         {/* Decorative vertical line */}
         <div className="absolute left-0 top-0 bottom-0 w-[1px] bg-gradient-to-b from-gray-800 via-gray-700 to-transparent hidden xl:block"></div>
 
-        <section className="xl:pl-8 relative group/section">
+        <section className="xl:pl-8 relative group/section debossed-container p-6 rounded-4xl bg-sand-base/20 border-none">
           {/* Section Marker */}
           <div className="absolute -left-1 top-1 w-2 h-2 rounded-full bg-gray-600 hidden xl:block group-hover/section:bg-white transition-colors"></div>
 
@@ -31,7 +31,7 @@ function AboutText(): JSX.Element {
           </p>
         </section>
 
-        <section className="xl:pl-8 relative group/section">
+        <section className="xl:pl-8 relative group/section debossed-container p-6 rounded-4xl bg-sand-base/20 border-none">
           <div className="absolute -left-1 top-1 w-2 h-2 rounded-full bg-gray-600 hidden xl:block group-hover/section:bg-white transition-colors"></div>
 
           <div className="flex items-center gap-3 mb-3">
@@ -44,7 +44,7 @@ function AboutText(): JSX.Element {
           </p>
         </section>
 
-        <section className="xl:pl-8 relative group/section">
+        <section className="xl:pl-8 relative group/section debossed-container p-6 rounded-4xl bg-sand-base/20 border-none">
           <div className="absolute -left-1 top-1 w-2 h-2 rounded-full bg-gray-600 hidden xl:block group-hover/section:bg-white transition-colors"></div>
 
           <div className="flex items-center gap-3 mb-3">
@@ -57,7 +57,7 @@ function AboutText(): JSX.Element {
           </p>
         </section>
 
-        <section className="xl:pl-8 relative group/section">
+        <section className="xl:pl-8 relative group/section debossed-container p-6 rounded-4xl bg-sand-base/20 border-none">
           <div className="absolute -left-1 top-1 w-2 h-2 rounded-full bg-gray-600 hidden xl:block group-hover/section:bg-white transition-colors"></div>
 
           <div className="flex items-center gap-3 mb-3">
@@ -70,7 +70,7 @@ function AboutText(): JSX.Element {
           </p>
         </section>
 
-        <section className="xl:pl-8 relative group/section">
+        <section className="xl:pl-8 relative group/section debossed-container p-6 rounded-4xl bg-sand-base/20 border-none">
           <div className="absolute -left-1 top-1 w-2 h-2 rounded-full bg-gray-600 hidden xl:block group-hover/section:bg-white transition-colors"></div>
 
           <div className="flex items-center gap-3 mb-3">
@@ -99,7 +99,7 @@ function AboutText(): JSX.Element {
 export default function About(): JSX.Element {
   return (
     <section id="about" className="w-full h-auto p-2 flex items-center py-12 bg-transparent">
-      <div className="max-w-4xl m-auto">
+      <div className="max-w-4xl m-auto embossed-card p-10 md:p-16">
         <AboutText />
       </div>
     </section>
