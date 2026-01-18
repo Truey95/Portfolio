@@ -1,0 +1,76 @@
+
+> portfolio@0.1.0 build
+> next build
+
+- info Linting and checking validity of types...
+
+./pages/index.tsx
+158:6  Warning: React Hook useEffect has a missing dependency: 'goToSection'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+
+./components/HandScroll.tsx
+98:8  Warning: React Hook useEffect has a missing dependency: 'performScroll'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/basic-features/eslint#disabling-rules
+- info Creating an optimized production build...
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+<w> [webpack.cache.PackFileCacheStrategy] Skipped not serializable cache item 'Compilation/modules|/Users/trueytru/.gemini/antigravity/scratch/Portfolio/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[1].oneOf[13].use[1]!/Users/trueytru/.gemini/antigravity/scratch/Portfolio/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[1].oneOf[13].use[2]!/Users/trueytru/.gemini/antigravity/scratch/Portfolio/styles/globals.css': No serializer registered for PostCSSSyntaxError
+<w> while serializing webpack/lib/cache/PackFileCacheStrategy.PackContentItems -> webpack/lib/NormalModule -> webpack/lib/ModuleBuildError -> PostCSSSyntaxError
+Failed to compile.
+
+./styles/globals.css:1:1
+Syntax error: /Users/trueytru/.gemini/antigravity/scratch/Portfolio/styles/globals.css The `height-auto` class does not exist. If `height-auto` is a custom class, make sure it is defined within a `@layer` directive.
+
+> 1 | @tailwind base;
+    | ^
+  2 | @tailwind components;
+  3 | @tailwind utilities;
+
+./styles/globals.css
+Syntax error: /Users/trueytru/.gemini/antigravity/scratch/Portfolio/styles/globals.css The `height-auto` class does not exist. If `height-auto` is a custom class, make sure it is defined within a `@layer` directive. (1:1)
+
+> 1 | @tailwind base;
+    | ^
+  2 | @tailwind components;
+  3 | @tailwind utilities;
+
+    at tryRunOrWebpackError (/Users/trueytru/.gemini/antigravity/scratch/Portfolio/node_modules/next/dist/compiled/webpack/bundle5.js:28:311493)
+    at __webpack_require_module__ (/Users/trueytru/.gemini/antigravity/scratch/Portfolio/node_modules/next/dist/compiled/webpack/bundle5.js:28:131117)
+    at __nested_webpack_require_153754__ (/Users/trueytru/.gemini/antigravity/scratch/Portfolio/node_modules/next/dist/compiled/webpack/bundle5.js:28:130556)
+    at /Users/trueytru/.gemini/antigravity/scratch/Portfolio/node_modules/next/dist/compiled/webpack/bundle5.js:28:131409
+    at symbolIterator (/Users/trueytru/.gemini/antigravity/scratch/Portfolio/node_modules/next/dist/compiled/neo-async/async.js:1:14444)
+    at done (/Users/trueytru/.gemini/antigravity/scratch/Portfolio/node_modules/next/dist/compiled/neo-async/async.js:1:14824)
+    at Hook.eval [as callAsync] (eval at create (/Users/trueytru/.gemini/antigravity/scratch/Portfolio/node_modules/next/dist/compiled/webpack/bundle5.js:13:28867), <anonymous>:15:1)
+    at Hook.CALL_ASYNC_DELEGATE [as _callAsync] (/Users/trueytru/.gemini/antigravity/scratch/Portfolio/node_modules/next/dist/compiled/webpack/bundle5.js:13:26021)
+    at /Users/trueytru/.gemini/antigravity/scratch/Portfolio/node_modules/next/dist/compiled/webpack/bundle5.js:28:130276
+    at symbolIterator (/Users/trueytru/.gemini/antigravity/scratch/Portfolio/node_modules/next/dist/compiled/neo-async/async.js:1:14402)
+-- inner error --
+Syntax error: /Users/trueytru/.gemini/antigravity/scratch/Portfolio/styles/globals.css The `height-auto` class does not exist. If `height-auto` is a custom class, make sure it is defined within a `@layer` directive. (1:1)
+
+> 1 | @tailwind base;
+    | ^
+  2 | @tailwind components;
+  3 | @tailwind utilities;
+
+    at Object.<anonymous> (/Users/trueytru/.gemini/antigravity/scratch/Portfolio/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[1].oneOf[13].use[1]!/Users/trueytru/.gemini/antigravity/scratch/Portfolio/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[1].oneOf[13].use[2]!/Users/trueytru/.gemini/antigravity/scratch/Portfolio/styles/globals.css:1:7)
+    at /Users/trueytru/.gemini/antigravity/scratch/Portfolio/node_modules/next/dist/compiled/webpack/bundle5.js:28:915095
+    at Hook.eval [as call] (eval at create (/Users/trueytru/.gemini/antigravity/scratch/Portfolio/node_modules/next/dist/compiled/webpack/bundle5.js:13:28645), <anonymous>:7:1)
+    at Hook.CALL_DELEGATE [as _call] (/Users/trueytru/.gemini/antigravity/scratch/Portfolio/node_modules/next/dist/compiled/webpack/bundle5.js:13:25915)
+    at /Users/trueytru/.gemini/antigravity/scratch/Portfolio/node_modules/next/dist/compiled/webpack/bundle5.js:28:131150
+    at tryRunOrWebpackError (/Users/trueytru/.gemini/antigravity/scratch/Portfolio/node_modules/next/dist/compiled/webpack/bundle5.js:28:311447)
+    at __webpack_require_module__ (/Users/trueytru/.gemini/antigravity/scratch/Portfolio/node_modules/next/dist/compiled/webpack/bundle5.js:28:131117)
+    at __nested_webpack_require_153754__ (/Users/trueytru/.gemini/antigravity/scratch/Portfolio/node_modules/next/dist/compiled/webpack/bundle5.js:28:130556)
+    at /Users/trueytru/.gemini/antigravity/scratch/Portfolio/node_modules/next/dist/compiled/webpack/bundle5.js:28:131409
+    at symbolIterator (/Users/trueytru/.gemini/antigravity/scratch/Portfolio/node_modules/next/dist/compiled/neo-async/async.js:1:14444)
+
+Generated code for /Users/trueytru/.gemini/antigravity/scratch/Portfolio/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[1].oneOf[13].use[1]!/Users/trueytru/.gemini/antigravity/scratch/Portfolio/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[1].oneOf[13].use[2]!/Users/trueytru/.gemini/antigravity/scratch/Portfolio/styles/globals.css
+
+Import trace for requested module:
+./styles/globals.css
+
+
+> Build failed because of webpack errors
