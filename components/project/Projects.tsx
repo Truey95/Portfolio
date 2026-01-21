@@ -63,7 +63,7 @@ function ProjectsCarousel(): JSX.Element {
     if (carouselRef.current) {
       const containerWidth = carouselRef.current.parentElement?.offsetWidth || 0;
       const totalWidth = carouselRef.current.scrollWidth;
-      const minScroll = Math.min(0, containerWidth - totalWidth - 40);
+      const minScroll = Math.min(0, containerWidth - totalWidth - 100);
 
       if (scrollX > 0) {
         setScrollX(0);

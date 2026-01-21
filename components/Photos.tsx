@@ -69,7 +69,7 @@ function PhotosCarousel(): JSX.Element {
         if (carouselRef.current) {
             const containerWidth = carouselRef.current.parentElement?.offsetWidth || 0;
             const totalWidth = carouselRef.current.scrollWidth;
-            const minScroll = Math.min(0, containerWidth - totalWidth - 40);
+            const minScroll = Math.min(0, containerWidth - totalWidth - 100);
 
             if (scrollX > 0) {
                 setScrollX(0);
@@ -111,7 +111,7 @@ function PhotosCarousel(): JSX.Element {
                                 src={photo.src}
                                 alt={photo.alt}
                                 fill
-                                className="object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
+                                className="object-cover opacity-100 transition-opacity duration-700 pointer-events-none"
                             />
                         </div>
                         {/* Acid-washed sand texture overlay */}

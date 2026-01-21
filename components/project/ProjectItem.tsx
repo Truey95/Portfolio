@@ -27,14 +27,14 @@ export default function ProjectItem(props: {
   return (
     <Link href={projectUrl}>
       <div className="relative flex items-center justify-center h-[280px] w-[350px] embossed-card group overflow-hidden p-3 cursor-pointer">
-        <div className="relative w-full h-full overflow-hidden rounded-4xl grayscale group-hover:grayscale-0 transition-all duration-500 debossed-container border-none">
+        <div className="relative w-full h-full overflow-hidden rounded-4xl transition-all duration-500 debossed-container border-none">
           <Image
             alt={title}
             className="group-hover:scale-110 transition-transform duration-700 object-cover"
             src={backgroundImg}
             fill
           />
-          <div className="absolute inset-0 bg-sand-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4">
+          <div className="absolute inset-0 bg-sand-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4">
             <h3 className="text-xl text-white tracking-wider text-center uppercase font-bold">
               {title}
             </h3>

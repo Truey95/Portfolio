@@ -28,7 +28,7 @@ export default function Journey(): JSX.Element {
                             <button
                                 key={job.company}
                                 onClick={() => setActiveIndex(index)}
-                                className="group relative flex flex-col items-center focus:outline-none p-4 -m-4 cursor-pointer"
+                                className="group relative flex flex-col items-center focus:outline-none p-6 -m-6 cursor-pointer z-30"
                                 aria-label={`View ${job.company} details`}
                             >
                                 {/* Year Label */}

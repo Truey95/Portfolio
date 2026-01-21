@@ -178,10 +178,13 @@ export default function Home() {
             <div
               key={section.id}
               ref={(el) => (sectionRefs.current[i] = el)}
-              className="absolute inset-0 w-full h-full flex items-center justify-center overflow-hidden"
-              style={{ zIndex: SECTIONS.length - i }}
+              className="absolute inset-0 w-full h-full flex items-start justify-center overflow-y-auto"
+              style={{
+                zIndex: SECTIONS.length - i,
+                pointerEvents: i === index ? "auto" : "none"
+              }}
             >
-              <div className="w-full max-h-screen overflow-y-auto pointer-events-auto">
+              <div className="w-full min-h-full flex flex-col items-center">
                 <Component />
               </div>
             </div>

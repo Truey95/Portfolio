@@ -25,7 +25,7 @@ function AboutText(): JSX.Element {
             <HiOutlineLightBulb className="text-white text-lg" />
             <h3 className="text-white font-luxury text-xs uppercase tracking-widest italic">The Nexus of Tech & Arts</h3>
           </div>
-          <p className="text-white font-premium leading-relaxed text-lg">
+          <p className="text-white font-premium leading-relaxed text-base">
             I traverse the boundaries between code and creativity. To me, development isn&apos;t just about logic—it&apos;s an art form.
             By fusing technical precision with artistic intuition, I craft digital environments that resonate on a human level.
           </p>
@@ -38,8 +38,7 @@ function AboutText(): JSX.Element {
             <HiOutlineUserGroup className="text-white text-lg" />
             <h3 className="text-white font-luxury text-xs uppercase tracking-widest italic">Community & Connection</h3>
           </div>
-          <p className="text-white font-premium leading-relaxed text-lg">
-            Leading through action, I&apos;ve hosted events that bridge the gap between innovators.
+          <p className="text-white font-premium leading-relaxed text-base">
             Building a network isn&apos;t just about &quot;contacts&quot;; it&apos;s about fostering an ecosystem where ideas thrive and collective growth is the primary currency.
           </p>
         </section>
@@ -51,7 +50,7 @@ function AboutText(): JSX.Element {
             <HiOutlinePresentationChartLine className="text-white text-lg" />
             <h3 className="text-white font-luxury text-xs uppercase tracking-widest italic">The Entrepreneurial Crucible</h3>
           </div>
-          <p className="text-white font-premium leading-relaxed text-lg">
+          <p className="text-white font-premium leading-relaxed text-base">
             Past businesses were my ultimate proving ground. I&apos;ve experienced the weight of failure and the grit required to bounce back.
             Every venture that didn&apos;t go as planned was a masterclass in resilience, shifting my mindset from survival to strategic evolution.
           </p>
@@ -64,7 +63,7 @@ function AboutText(): JSX.Element {
             <HiOutlineAcademicCap className="text-white text-lg" />
             <h3 className="text-white font-luxury text-xs uppercase tracking-widest italic">Intellectual Growth & Private Study</h3>
           </div>
-          <p className="text-white font-premium leading-relaxed text-lg">
+          <p className="text-white font-premium leading-relaxed text-base">
             In the quiet hours of private study, I&apos;ve dismantled &quot;sinking mindsets&quot; through relentless self-education.
             I believe in the power of an autodidact&apos;s drive—constantly refining my craft and expanding my intellectual horizon to solve complex global problems.
           </p>
@@ -98,8 +97,8 @@ function AboutText(): JSX.Element {
 // about component
 export default function About(): JSX.Element {
   return (
-    <section id="about" className="w-full min-h-screen p-2 flex items-center py-24 bg-transparent">
-      <div className="max-w-4xl m-auto embossed-card p-10 md:p-16">
+    <section id="about" className="w-full min-h-screen p-2 flex items-center py-20 bg-transparent">
+      <div className="max-w-4xl m-auto embossed-card p-6 md:p-10">
         <AboutText />
       </div>
     </section>
