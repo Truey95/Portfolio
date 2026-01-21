@@ -1,6 +1,8 @@
 import React from 'react';
 import { HiOutlineChatBubbleLeftRight, HiOutlineShieldCheck, HiOutlineCpuChip, HiOutlineCodeBracket, HiOutlinePresentationChartBar, HiOutlineWrenchScrewdriver } from "react-icons/hi2";
 
+import ProjectButtonDemo from './ProjectButtonDemo';
+
 export default function LegalPresenceContent(): JSX.Element {
     return (
         <div className="space-y-12 pb-24">
@@ -106,9 +108,9 @@ export default function LegalPresenceContent(): JSX.Element {
                     Empowering firms to adopt AI without expensive SaaS lock-in.
                     Community-driven jurisdictions and compliance templates.
                 </p>
-                <button className="px-12 py-4">
-                    View on GitHub
-                </button>
+                <div className="flex justify-center gap-6 mt-10">
+                    <ProjectButtonDemo url="https://lawyer-ai-rho.vercel.app/" />
+                </div>
             </section>
         </div>
     );

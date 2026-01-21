@@ -6,6 +6,7 @@ import ProjectHeroText from "../components/project/ProjectHeroText";
 import TechStack from "../components/TechStack";
 import SandBackground from "../components/SandBackground";
 import LegalPresenceContent from "../components/project/LegalPresenceContent";
+import ProjectButtonDemo from "../components/project/ProjectButtonDemo";
 
 const techStack = [
     "Node.js",
@@ -46,7 +47,8 @@ export default function LegalPresence(): JSX.Element {
                     <div className="col-span-1">
                         <div className="sticky top-24 space-y-8">
                             <TechStack data={techStack} />
-                            <div className="pt-4">
+                            <div className="pt-4 flex flex-col gap-4">
+                                <ProjectButtonDemo url="https://lawyer-ai-rho.vercel.app/" />
                                 <BackButton />
                             </div>
                         </div>
