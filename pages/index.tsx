@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Head from "next/head";
 import { Inter } from "@next/font/google";
+import { useRouter } from "next/router";
 import { gsap } from "gsap";
 
 import About from "../components/About";
@@ -27,6 +28,7 @@ const SECTIONS = [
 export default function Home() {
   const [index, setIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const router = useRouter();
   const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
@@ -134,28 +136,19 @@ export default function Home() {
     window.addEventListener("touchstart", handleTouchStart);
     window.addEventListener("touchend", handleTouchEnd);
 
-    // Hash navigation integration
-    const handleHashChange = () => {
-      const hash = window.location.hash.replace("#", "");
-      const targetIdx = SECTIONS.findIndex((s) => s.id === hash);
-      if (targetIdx !== -1 && targetIdx !== index) {
-        goToSection(targetIdx);
-      }
-    };
-
-    window.addEventListener("hashchange", handleHashChange);
-    // Handle initial hash on load
-    if (window.location.hash) {
-      handleHashChange();
+    // Hash navigation integration via useRouter
+    const hash = router.asPath.split('#')[1] || "hero";
+    const targetIdx = SECTIONS.findIndex((s) => s.id === hash);
+    if (targetIdx !== -1 && targetIdx !== index) {
+      goToSection(targetIdx);
     }
 
     return () => {
       window.removeEventListener("wheel", handleWheel);
       window.removeEventListener("touchstart", handleTouchStart);
       window.removeEventListener("touchend", handleTouchEnd);
-      window.removeEventListener("hashchange", handleHashChange);
     };
-  }, [index, isTransitioning]);
+  }, [index, isTransitioning, router.asPath]);
 
   return (
     <div className="relative bg-sand-black text-gray-200 h-screen w-screen overflow-hidden">

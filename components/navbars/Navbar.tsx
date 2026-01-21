@@ -62,7 +62,11 @@ export default function Navbar(): JSX.Element {
             onClick={() => setNav(false)}
             className="py-4 text-sm tracking-widest text-white hover:text-white transition-colors"
           >
-            <Link scroll={false} href={link.href}>
+            <Link
+              scroll={false}
+              href={link.href}
+              {...(link.href.startsWith('http') ? { target: "_blank", rel: "noreferrer" } : {})}
+            >
               {link.text}
             </Link>
           </li>
@@ -81,7 +85,11 @@ export default function Navbar(): JSX.Element {
               key={link.text}
               className="ml-10 text-xs font-luxury tracking-[0.2em] hover:text-white transition-colors border-b border-transparent hover:border-white/50 py-1"
             >
-              <Link scroll={false} href={link.href}>
+              <Link
+                scroll={false}
+                href={link.href}
+                {...(link.href.startsWith('http') ? { target: "_blank", rel: "noreferrer" } : {})}
+              >
                 {link.text}
               </Link>
             </li>
