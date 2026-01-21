@@ -137,18 +137,22 @@ export default function Home() {
     window.addEventListener("touchend", handleTouchEnd);
 
     // Hash navigation integration via useRouter
-    const hash = router.asPath.split('#')[1] || "hero";
-    const targetIdx = SECTIONS.findIndex((s) => s.id === hash);
-    if (targetIdx !== -1 && targetIdx !== index) {
-      goToSection(targetIdx);
-    }
+    const handleHashSync = () => {
+      const hash = router.asPath.split('#')[1] || "hero";
+      const targetIdx = SECTIONS.findIndex((s) => s.id === hash);
+      if (targetIdx !== -1 && targetIdx !== index) {
+        goToSection(targetIdx);
+      }
+    };
+
+    handleHashSync();
 
     return () => {
       window.removeEventListener("wheel", handleWheel);
       window.removeEventListener("touchstart", handleTouchStart);
       window.removeEventListener("touchend", handleTouchEnd);
     };
-  }, [index, isTransitioning, router.asPath]);
+  }, [index, isTransitioning, router.asPath, goToSection]);
 
   return (
     <div className="relative bg-sand-black text-gray-200 h-screen w-screen overflow-hidden">

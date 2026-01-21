@@ -8,13 +8,13 @@ import NavbarLogoGlobal from "./NavbarLogoGlobal";
 import NavbarBottomSideMenu from "./NavbarBottomSideMenu";
 
 const navbarLinksData = [
-  { href: "#hero", text: "Home" },
-  { href: "#projects", text: "Projects" },
-  { href: "#photos", text: "Photos" },
-  { href: "#journey", text: "Journey" },
-  { href: "#about", text: "About" },
-  { href: "#skills", text: "Skills" },
-  { href: "#contact", text: "Contact" },
+  { href: "/#hero", text: "Home" },
+  { href: "/#projects", text: "Projects" },
+  { href: "/#photos", text: "Photos" },
+  { href: "/#journey", text: "Journey" },
+  { href: "/#about", text: "About" },
+  { href: "/#skills", text: "Skills" },
+  { href: "/#contact", text: "Contact" },
   { href: "https://drive.google.com/file/d/1Fpq992lIVQcYGcYLo5ijypVmbDOkUSsq/view?usp=sharing", text: "Resume" },
 ] as const;
 
