@@ -5,6 +5,7 @@ import aivrartImg from "../../public/assets/projects/aivrart.png";
 import petcoraImg from "../../public/assets/projects/petcora.png";
 import swdnnImg from "../../public/assets/projects/swdnn.png";
 import legalPresenceImg from "../../public/assets/projects/legal_presence.png";
+import albertusImg from "../../public/assets/projects/albertus.png";
 
 
 
@@ -17,6 +18,7 @@ const projectData = [
   { img: swdnnImg, url: "/swdnn", tech: "Static", title: "SWDNN" },
   { img: petcoraImg, url: "/petcoraa", tech: "Typescript", title: "Pet Cora" },
   { img: legalPresenceImg, url: "/legalpresence", tech: "Open Source AI", title: "LegalPresence" },
+  { img: albertusImg, url: "/albertus", tech: "AI Education", title: "Albertus AI" },
 ];
 
 function ProjectsCarousel(): JSX.Element {
