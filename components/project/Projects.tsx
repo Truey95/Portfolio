@@ -114,7 +114,7 @@ function ProjectsCarousel(): JSX.Element {
 // projects component
 export default function Projects(): JSX.Element {
   return (
-    <div id="projects" className="w-full min-h-screen flex items-center">
+    <div id="projects" className="w-full">
       <div className="max-w-[100vw] mx-auto px-4 py-8 overflow-hidden w-full">
         <p className="text-xl tracking-widest uppercase text-white text-center xl:text-start lg:pt-4">
           Projects

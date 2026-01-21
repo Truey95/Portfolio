@@ -3,7 +3,7 @@ import SkillsContainer from "./SkillsContainer";
 // skills component
 function Skills(): JSX.Element {
   return (
-    <div id="skills" className="w-full min-h-screen p-2 flex items-center">
+    <div id="skills" className="w-full p-2">
       <div className="max-w-7xl mx-auto flex flex-col justify-center w-full px-6">
         <p className="uppercase text-sm tracking-[0.3em] text-white text-center xl:text-start pt-4 font-luxury">
           Skills

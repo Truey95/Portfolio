@@ -97,7 +97,7 @@ function AboutText(): JSX.Element {
 // about component
 export default function About(): JSX.Element {
   return (
-    <section id="about" className="w-full min-h-screen p-2 flex items-center py-20 bg-transparent">
+    <section id="about" className="w-full bg-transparent px-2">
       <div className="max-w-4xl m-auto embossed-card p-6 md:p-10">
         <AboutText />
       </div>

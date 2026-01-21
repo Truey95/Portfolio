@@ -6,7 +6,7 @@ export default function Journey(): JSX.Element {
     const activeJob = journeyData[activeIndex];
 
     return (
-        <section id="journey" className="w-full min-h-screen flex items-center justify-center bg-transparent py-20">
+        <section id="journey" className="w-full bg-transparent">
             <div className="w-full max-w-5xl mx-auto px-6 flex flex-col">
                 {/* Compact Header */}
                 <div className="text-center mb-6">

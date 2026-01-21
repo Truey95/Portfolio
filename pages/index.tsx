@@ -184,7 +184,7 @@ export default function Home() {
                 pointerEvents: i === index ? "auto" : "none"
               }}
             >
-              <div className="w-full min-h-full flex flex-col items-center">
+              <div className="w-full min-h-full flex flex-col items-center justify-center py-12 md:py-20 px-4">
                 <Component />
               </div>
             </div>
