@@ -151,7 +151,7 @@ function PhotosCarousel(): JSX.Element {
 
 export default function Photos(): JSX.Element {
     return (
-        <section id="photos" className="w-full py-12 bg-transparent flex items-center">
+        <section id="photos" className="w-full min-h-screen py-12 bg-transparent flex items-center">
             <div className="max-w-[100vw] mx-auto px-6 overflow-hidden w-full">
                 <p className="uppercase text-sm tracking-[0.3em] text-white text-center xl:text-start font-luxury mb-4">
                     Gallery

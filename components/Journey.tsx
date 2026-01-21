@@ -1,91 +1,139 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { journeyData, earlyFoundations, educationData } from './journeyData';
 
 export default function Journey(): JSX.Element {
+    const [activeIndex, setActiveIndex] = useState(0);
+    const activeJob = journeyData[activeIndex];
+
     return (
-        <section id="journey" className="w-full h-auto py-24 bg-transparent mt-20">
-            <div className="max-w-5xl mx-auto px-6">
-                <div className="text-center mb-16">
-                    <p className="uppercase text-sm tracking-[0.4em] text-white font-luxury mb-4">
-                        Skill-Stacking Journey
+        <section id="journey" className="w-full min-h-screen flex items-center justify-center bg-transparent py-20">
+            <div className="w-full max-w-5xl mx-auto px-6 flex flex-col">
+                {/* Compact Header */}
+                <div className="text-center mb-6">
+                    <p className="uppercase text-[9px] tracking-[0.4em] text-white/60 font-luxury mb-1">
+                        Evolutionary Progress
                     </p>
-                    <h2 className="text-4xl md:text-5xl font-luxury text-white uppercase tracking-widest mb-8">
+                    <h2 className="text-2xl md:text-3xl font-luxury text-white uppercase tracking-[0.2em]">
                         The Evolution
                     </h2>
-                    <p className="text-white font-premium max-w-2xl mx-auto leading-relaxed text-lg opacity-90">
-                        A lifelong builder of skills and systems, I&apos;ve spent 15+ years layering expertise across technology,
-                        hardware, software, design, and human-centered problem solving.
-                    </p>
                 </div>
 
-                <div className="space-y-12 relative">
-                    {/* Vertical path */}
-                    <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-[1px] bg-white/10 -translate-x-1/2 hidden md:block" />
+                {/* Streamlined Horizontal Timeline */}
+                <div className="relative mb-12 px-2 mt-6">
+                    {/* Background Line */}
+                    <div className="absolute top-1/2 left-0 w-full h-[1px] bg-white/10 -translate-y-1/2 z-0" />
 
-                    {journeyData.map((job, index) => (
-                        <div key={job.company} className="relative flex flex-col md:flex-row items-center justify-between">
-                            {/* Timeline dot */}
-                            <div className="absolute left-4 md:left-1/2 w-3 h-3 bg-white rounded-full -translate-x-1/2 z-10 hidden md:block"
-                                style={{ top: '2rem' }} />
+                    <div className="relative flex justify-between items-center w-full z-10">
+                        {journeyData.map((job, index) => (
+                            <button
+                                key={job.company}
+                                onClick={() => setActiveIndex(index)}
+                                className="group relative flex flex-col items-center focus:outline-none p-4 -m-4 cursor-pointer"
+                                aria-label={`View ${job.company} details`}
+                            >
+                                {/* Year Label */}
+                                <span className={`absolute -top-10 text-[10px] tracking-[0.1em] font-luxury transition-all duration-300 ${index === activeIndex ? 'text-white opacity-100 scale-110 font-bold' : 'text-white/30 group-hover:text-white/60'
+                                    }`}>
+                                    {job.year}
+                                </span>
 
-                            <div className={`w-full md:w-[45%] ${index % 2 === 0 ? 'md:mr-auto' : 'md:ml-auto'}`}>
-                                <div className="embossed-card p-8 group hover:scale-[1.02] transition-transform duration-500 rounded-5xl">
-                                    <div className="flex justify-between items-start mb-4">
-                                        <span className="text-[10px] tracking-[0.3em] uppercase text-white/60 font-luxury italic">
-                                            {job.year}
-                                        </span>
-                                        <span className="text-[10px] tracking-[0.2em] uppercase text-white/40 font-premium">
-                                            Skill Layer
-                                        </span>
-                                    </div>
-
-                                    <h3 className="text-xl font-luxury text-white mb-1 uppercase tracking-wider">{job.company}</h3>
-                                    <p className="text-sm font-premium text-white/80 mb-4 italic">{job.role}</p>
-
-                                    <div className="debossed-container p-4 rounded-4xl border-none mb-6">
-                                        <p className="text-[11px] uppercase tracking-[0.2em] text-white/90 font-bold mb-1">Layer Depth:</p>
-                                        <p className="text-xs text-white/70 italic">{job.layer}</p>
-                                    </div>
-
-                                    <ul className="space-y-3">
-                                        {job.description.map((item, i) => (
-                                            <li key={i} className="flex gap-3 text-sm text-white/80 font-premium leading-relaxed border-none lowercase p-0 hover:bg-transparent rounded-none">
-                                                <span className="text-white opacity-40 mt-1">•</span>
-                                                {item}
-                                            </li>
-                                        ))}
-                                    </ul>
+                                {/* Minimal Dot with larger visible hit area on hover */}
+                                <div className={`relative w-4 h-4 flex items-center justify-center`}>
+                                    <div className={`w-3 h-3 rounded-full border transition-all duration-500 z-10 ${index === activeIndex
+                                        ? 'bg-white border-white scale-125 shadow-[0_0_15px_rgba(255,255,255,0.6)]'
+                                        : 'bg-sand-black border-white/20 group-hover:border-white/60 group-hover:scale-110'
+                                        }`} />
+                                    {/* Invisible larger hit area wrapper */}
+                                    <div className="absolute inset-x-[-20px] inset-y-[-20px]" />
                                 </div>
+
+                                {/* Company Hint */}
+                                <span className={`absolute -bottom-8 text-[8px] uppercase tracking-[0.1em] font-premium transition-all duration-300 hidden md:block whitespace-nowrap ${index === activeIndex ? 'text-white/80 opacity-100' : 'opacity-0'
+                                    }`}>
+                                    {job.company}
+                                </span>
+                            </button>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Adaptive Content Area */}
+                <div className="flex-1 flex flex-col md:grid md:grid-cols-12 gap-6 min-h-0">
+
+                    {/* Left: Summary & Metadata */}
+                    <div className="md:col-span-4 flex flex-col gap-4 overflow-hidden">
+                        <div className="embossed-card p-5 rounded-4xl flex-shrink-0">
+                            <h3 className="text-xl font-luxury text-white mb-1 uppercase tracking-wider leading-tight">
+                                {activeJob.company}
+                            </h3>
+                            <p className="text-xs font-premium text-white/60 mb-4 italic">
+                                {activeJob.role}
+                            </p>
+
+                            <div className="debossed-container p-3 rounded-2xl bg-black/20 border-none">
+                                <p className="text-[8px] uppercase tracking-[0.1em] text-white/50 font-bold mb-1">Layer:</p>
+                                <p className="text-[10px] text-white/70 font-premium italic leading-tight">
+                                    {activeJob.layer}
+                                </p>
                             </div>
                         </div>
-                    ))}
-                </div>
 
-                {/* Education & Foundations */}
-                <div className="grid md:grid-cols-2 gap-8 mt-24">
-                    <div className="embossed-card p-8">
-                        <p className="uppercase text-xs tracking-[0.3em] text-white/60 font-luxury mb-6 flex items-center gap-3">
-                            <span className="w-6 h-[1px] bg-white/20"></span>
-                            Education
-                        </p>
-                        <h3 className="text-2xl font-luxury text-white uppercase tracking-widest mb-2">{educationData.college}</h3>
-                        <p className="text-lg font-premium text-white/80 italic mb-1">{educationData.degree}</p>
-                        <p className="text-sm font-luxury text-white/40">{educationData.year}</p>
+                        {/* Education/Foundations - Making them look more interactive */}
+                        <div className="flex flex-col gap-3 mt-auto mb-2 opacity-70 hover:opacity-100 transition-opacity">
+                            <div className="debossed-container p-3 rounded-2xl border-none cursor-pointer hover:bg-white/5 transition-colors">
+                                <p className="text-[8px] uppercase tracking-widest text-white/30 mb-1 font-luxury">Education</p>
+                                <p className="text-[9px] text-white/70 font-premium truncate uppercase tracking-tighter">
+                                    {educationData.college} • {educationData.degree} <span className="text-white/40 ml-1">[{educationData.year}]</span>
+                                </p>
+                            </div>
+                        </div>
                     </div>
 
-                    <div className="embossed-card p-8">
-                        <p className="uppercase text-xs tracking-[0.3em] text-white/60 font-luxury mb-6 flex items-center gap-3">
-                            <span className="w-6 h-[1px] bg-white/20"></span>
-                            Early Foundations
-                        </p>
-                        <div className="space-y-6">
-                            {earlyFoundations.map((found, i) => (
-                                <div key={i} className="border-l border-white/10 pl-4">
-                                    <h4 className="text-white font-luxury uppercase tracking-wider text-sm">{found.company} — {found.role}</h4>
-                                    <p className="text-[10px] text-white/40 mb-2 uppercase tracking-widest font-luxury">Age {found.age}</p>
-                                    <p className="text-xs text-white/70 font-premium leading-relaxed">{found.takeaway}</p>
+                    {/* Right: Detailed List */}
+                    <div className="md:col-span-8 flex flex-col">
+                        <div className="debossed-container p-6 rounded-4xl border-none flex-1 flex flex-col">
+                            <h4 className="text-[9px] uppercase tracking-[0.3em] text-white/30 mb-4 font-luxury flex items-center gap-3 flex-shrink-0">
+                                <span className="w-6 h-[1px] bg-white/10"></span>
+                                Impact
+                            </h4>
+
+                            <div className="pr-2">
+                                <ul className="space-y-4">
+                                    {activeJob.description.map((item, i) => (
+                                        <li
+                                            key={i}
+                                            className="flex gap-3 text-sm text-white/80 font-premium leading-relaxed border-none p-0 hover:bg-transparent rounded-none transition-all duration-300 group/item"
+                                        >
+                                            <span className="w-1 h-1 rounded-full bg-white/20 mt-2 shrink-0 group-hover/item:bg-white/50 transition-colors" />
+                                            <span className="lowercase first-letter:uppercase">{item}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+
+                            {/* Early Traits - Making ages clickable */}
+                            <div className="mt-4 pt-4 border-t border-white/5 flex-shrink-0">
+                                <p className="text-[8px] uppercase tracking-widest text-white/30 mb-2 font-luxury">Early Foundations</p>
+                                <div className="flex flex-wrap gap-3">
+                                    {earlyFoundations.map((found, i) => (
+                                        <button
+                                            key={found.company}
+                                            className="group/foundation relative flex items-center gap-2 px-3 py-1.5 rounded-full debossed-container border-none hover:bg-white/5 transition-all duration-300"
+                                            title={found.takeaway}
+                                        >
+                                            <span className="text-[10px] text-white font-bold font-luxury">Age {found.age}</span>
+                                            <span className="text-[8px] text-white/30 font-premium uppercase tracking-tighter group-hover/foundation:text-white/60 transition-colors">
+                                                {found.company}
+                                            </span>
+
+                                            {/* Hover Takeaway Tooltip */}
+                                            <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 p-2 bg-white/10 backdrop-blur-md rounded-lg border border-white/10 opacity-0 group-hover/foundation:opacity-100 transition-opacity pointer-events-none w-48 z-50">
+                                                <p className="text-[9px] text-white/90 font-premium leading-tight text-center italic">{found.takeaway}</p>
+                                            </div>
+                                        </button>
+                                    ))}
                                 </div>
-                            ))}
+                            </div>
                         </div>
                     </div>
                 </div>

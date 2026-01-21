@@ -63,7 +63,7 @@ export default function ContactForm(): JSX.Element {
                 </div>
                 <button
                     type="submit"
-                    className="w-full md:w-auto px-12 py-4 rounded-4xl text-white uppercase tracking-[0.3em] font-luxury text-xs hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+                    className="w-full md:w-auto px-12 py-4 rounded-4xl bg-sand-gray text-white uppercase tracking-[0.3em] font-luxury text-xs hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 shadow-embossed-sm hover:shadow-embossed"
                 >
                     Send Signal
                 </button>

@@ -7,7 +7,7 @@ export default function Contact(): JSX.Element {
   return (
     <div
       id="contact"
-      className="w-full h-auto p-2 flex items-center py-24"
+      className="w-full min-h-screen p-2 flex items-center py-24"
     >
       <div className="max-w-7xl m-auto flex flex-col items-center gap-16">
         <div className="text-center">

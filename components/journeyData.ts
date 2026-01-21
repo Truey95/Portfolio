@@ -31,7 +31,7 @@ export const journeyData: Job[] = [
     {
         company: "Pharmacy Network",
         role: "Pharmacy Technician Assistant",
-        year: "Date",
+        year: "2017",
         layer: "Multilingual Communication & Process Accuracy",
         description: [
             "Prepared and delivered medication safely across a city-wide network.",
@@ -42,7 +42,7 @@ export const journeyData: Job[] = [
     {
         company: "Honeywell",
         role: "Motherboard Production Technician",
-        year: "Date",
+        year: "2015",
         layer: "Hardware Assembly & Technical Troubleshooting",
         description: [
             "Produced motherboards for safety-critical fire alarm systems.",
@@ -65,8 +65,8 @@ export const journeyData: Job[] = [
 
 export const educationData = {
     college: "Pierce College",
-    degree: "Degree in [Your Major]",
-    year: "[Year]"
+    degree: "Computer Science & Engineering",
+    year: "2021"
 };
 
 export const earlyFoundations = [

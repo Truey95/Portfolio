@@ -181,7 +181,7 @@ export default function Home() {
               className="absolute inset-0 w-full h-full flex items-center justify-center overflow-hidden"
               style={{ zIndex: SECTIONS.length - i }}
             >
-              <div className="w-full max-h-full overflow-y-auto px-4 py-8 pointer-events-auto">
+              <div className="w-full max-h-screen overflow-y-auto pointer-events-auto">
                 <Component />
               </div>
             </div>

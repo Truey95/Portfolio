@@ -9,9 +9,9 @@ export default function HeroText(): JSX.Element {
         <h1 className="text-white drop-shadow-sm font-black">
           RICKY <span className="text-white opacity-90">ROLLINS</span>
         </h1>
-        <button className="mt-4">
+        <a href="#contact" className="mt-4 px-8 py-3 embossed-card rounded-full text-white font-luxury uppercase tracking-widest hover:scale-105 transition-all duration-300">
           Get in touch
-        </button>
+        </a>
       </div>
     </>
   );
