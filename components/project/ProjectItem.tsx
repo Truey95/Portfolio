@@ -18,7 +18,7 @@ function ProjectItemButton({
 
 // project item component
 export default function ProjectItem(props: {
-  backgroundImg: StaticImageData;
+  backgroundImg: StaticImageData | string;
   projectUrl: string;
   tech: string;
   title: string;
